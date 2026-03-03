@@ -1,122 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HMI Tech Services | ERP & IT Solutions in Gurgaon</title>
-    <meta name="description" content="ERPNext customization, Frappe development, accounting, server and eCommerce solutions in Gurgaon and across India.">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-        body{background:#f1f5f9;color:#1e293b}
-        header{background:#fff;padding:20px 10%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000}
-        header img{height:50px}
-        header h1{font-size:22px}
-        .btn{background:#1e3a8a;color:#fff;padding:12px 22px;border-radius:30px;text-decoration:none;font-weight:600;display:inline-block}
-        .hero{text-align:center;padding:80px 10%}
-        .hero h2{font-size:42px;margin-bottom:20px}
-        .hero p{max-width:750px;margin:auto;color:#475569;margin-bottom:30px}
-        .services{padding:70px 10%}
-        .services h3{text-align:center;font-size:32px;margin-bottom:40px}
-        .service-detail{background:#fff;padding:30px;border-radius:20px;box-shadow:0 4px 15px rgba(0,0,0,0.05);margin-bottom:30px}
-        .service-detail h4{margin-bottom:15px;color:#1e3a8a}
-        .service-detail p{color:#475569;margin-bottom:10px}
-        .quotation{display:none;padding:70px 10%;background:#fff}
-        form{max-width:600px;margin:auto;display:flex;flex-direction:column;gap:15px}
-        input,select,textarea{padding:12px;border-radius:8px;border:1px solid #cbd5e1}
-        textarea{resize:vertical;min-height:100px}
-        footer{text-align:center;padding:20px;background:#e2e8f0;font-size:14px;margin-top:40px}
-
-        /* WhatsApp Button */
-        .whatsapp-float{position:fixed;width:60px;height:60px;bottom:20px;right:20px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:2px 2px 10px rgba(0,0,0,0.2);z-index:100}
-        .whatsapp-float img{width:35px}
-
-        @media(max-width:768px){.hero h2{font-size:28px}}
-    </style>
-
-    <script>
-        function showQuotation(){
-            document.getElementById('quotationSection').style.display='block';
-            document.getElementById('quotationSection').scrollIntoView({behavior:'smooth'});
-        }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HMI Technology - Premium IT Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#f5f7fb;color:#222}
+header{background:linear-gradient(135deg,#0d6efd,#001f3f);color:white;padding:80px 20px;text-align:center}
+header h1{font-size:42px;margin-bottom:15px}
+header p{font-size:18px;margin-bottom:30px;opacity:.9}
+.btn{display:inline-block;padding:14px 30px;margin:8px;border-radius:30px;text-decoration:none;font-weight:600;transition:.3s}
+.primary{background:white;color:#0d6efd}
+.primary:hover{background:#e6e6e6}
+.secondary{background:#25D366;color:white}
+.secondary:hover{background:#1ebe5d}
+section{padding:70px 20px;text-align:center}
+.services{background:white}
+.services h2{font-size:32px;margin-bottom:40px}
+.service-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;max-width:1100px;margin:auto}
+.service-box{background:#f9fafc;padding:30px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,0.05);transition:.3s}
+.service-box:hover{transform:translateY(-8px);box-shadow:0 8px 25px rgba(0,0,0,0.1)}
+.service-box i{font-size:35px;color:#0d6efd;margin-bottom:15px}
+.service-box h3{margin-bottom:10px}
+#contact{background:#0d6efd;color:white}
+#contact h2{margin-bottom:20px}
+#contact p{margin:6px 0}
+#quotation{background:#f5f7fb}
+form{max-width:650px;margin:30px auto;background:white;padding:40px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.08)}
+input,select,textarea{width:100%;padding:14px;margin:12px 0;border-radius:8px;border:1px solid #ddd;font-family:'Poppins'}
+input:focus,select:focus,textarea:focus{outline:none;border-color:#0d6efd}
+button{padding:14px 25px;background:#0d6efd;color:white;border:none;border-radius:30px;font-weight:600;cursor:pointer;transition:.3s}
+button:hover{background:#084298}
+.whatsapp-float{position:fixed;width:65px;height:65px;bottom:25px;right:25px;background:#25D366;color:#FFF;border-radius:50%;text-align:center;font-size:32px;box-shadow:0 8px 20px rgba(0,0,0,0.2);z-index:100;display:flex;align-items:center;justify-content:center;transition:.3s}
+.whatsapp-float:hover{transform:scale(1.1)}
+footer{background:#001f3f;color:white;text-align:center;padding:20px;font-size:14px}
+</style>
 </head>
 <body>
 
 <header>
-    <div style="display:flex;align-items:center;gap:10px;">
-        <img src="logo.png" alt="HMI Logo">
-        <h1>HMI Tech Services</h1>
-    </div>
-    <a href="javascript:void(0)" onclick="showQuotation()" class="btn">Get Quotation</a>
+<h1>HMI Technology</h1>
+<p>Premium IT & Digital Solutions in Gurgaon & Across India</p>
+<a href="#contact" class="btn primary">Contact Us</a>
+<a href="#quotation" class="btn secondary">Get Free Quotation</a>
 </header>
 
-<section class="hero">
-    <h2>Complete IT & ERP Solutions for Your Business</h2>
-    <p>Professional ERPNext customization, accounting setup, server management and Frappe application development services from Gurgaon serving clients across India.</p>
-    <a href="javascript:void(0)" onclick="showQuotation()" class="btn">Get Free Consultation</a>
-</section>
-
 <section class="services">
-    <h3>Our Services</h3>
+<h2>Our Premium Services</h2>
+<div class="service-container">
 
-    <div class="service-detail">
-        <h4>ERPNext Implementation & Customization</h4>
-        <p>We provide complete ERPNext setup including Accounts, HR, Sales, Purchase and Inventory modules.</p>
-        <p>Custom workflows, print formats, reports, user permissions and automation tailored to your business process.</p>
-    </div>
+<div class="service-box">
+<i class="fas fa-laptop-code"></i>
+<h3>Website Development</h3>
+<p>Modern, fast and SEO-optimized business websites & eCommerce platforms designed to convert visitors into customers.</p>
+</div>
 
-    <div class="service-detail">
-        <h4>Accounting & GST Setup</h4>
-        <p>Full accounting configuration with proper Chart of Accounts structure.</p>
-        <p>GST compliance setup, reconciliation, MIS reports and financial dashboard creation.</p>
-    </div>
+<div class="service-box">
+<i class="fas fa-cogs"></i>
+<h3>Custom Software</h3>
+<p>ERP, billing systems and automation tools tailored specifically for your business workflow.</p>
+</div>
 
-    <div class="service-detail">
-        <h4>Server & Cloud Deployment</h4>
-        <p>ERPNext installation on VPS, AWS, DigitalOcean and other cloud platforms.</p>
-        <p>Domain setup, SSL installation, security hardening and automated backup systems.</p>
-    </div>
+<div class="service-box">
+<i class="fas fa-chart-line"></i>
+<h3>SEO & Marketing</h3>
+<p>Rank higher on Google with strategic SEO, paid ads management and complete digital marketing solutions.</p>
+</div>
 
-    <div class="service-detail">
-        <h4>eCommerce & Website Integration</h4>
-        <p>Complete eCommerce website development with payment gateway integration.</p>
-        <p>ERP integration for real-time inventory sync and order management.</p>
-    </div>
+<div class="service-box">
+<i class="fas fa-shield-alt"></i>
+<h3>IT Support</h3>
+<p>Full technical support, hosting setup, maintenance and security monitoring for smooth business operations.</p>
+</div>
 
-    <div class="service-detail">
-        <h4>Custom Frappe Application Development</h4>
-        <p>Custom business applications built on Frappe framework.</p>
-        <p>API integration, automation scripts and ongoing technical support.</p>
-    </div>
+</div>
 </section>
 
-<section id="quotationSection" class="quotation">
-    <h3 style="text-align:center;margin-bottom:30px">Get a Free Quotation</h3>
-    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="tel" name="phone" placeholder="Your Contact Number" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <select name="service" required>
-            <option value="">Select Required Service</option>
-            <option>ERPNext Customization</option>
-            <option>Accounting Setup</option>
-            <option>Server Management</option>
-            <option>eCommerce Development</option>
-            <option>Frappe App Development</option>
-        </select>
-        <textarea name="details" placeholder="Briefly describe your requirement..."></textarea>
-        <button type="submit" class="btn">Submit Request</button>
-    </form>
+<section id="contact">
+<h2>Contact Us</h2>
+<p><strong>Phone:</strong> 9560291565</p>
+<p><strong>Email:</strong> serviceshmitech@gmail.com</p>
+<p><strong>Location:</strong> Gurgaon, Haryana, India</p>
 </section>
+
+<section id="quotation">
+<h2>Get a Free Quotation</h2>
+<form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="text" name="contact" placeholder="Your Contact Number" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<select name="service" required>
+<option value="">Select Required Service</option>
+<option>Website Development</option>
+<option>Software Development</option>
+<option>SEO & Digital Marketing</option>
+<option>IT Support</option>
+</select>
+<textarea name="message" rows="4" placeholder="Briefly describe your requirement..."></textarea>
+<button type="submit">Submit Request</button>
+</form>
+</section>
+
+<a href="https://wa.me/919560291565" class="whatsapp-float" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
 
 <footer>
-    © 2026 HMI Tech Services | Gurgaon, India | All Rights Reserved.
+© 2026 HMI Technology | All Rights Reserved
 </footer>
-
-<a href="https://wa.me/919560291565" target="_blank" class="whatsapp-float">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-</a>
 
 </body>
 </html>
