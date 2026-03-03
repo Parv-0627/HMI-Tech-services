@@ -4,17 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HMI Technology - Premium IT & Zoho Services</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Poppins',sans-serif;background:#f5f7fb;color:#222}
+
 header{background:linear-gradient(135deg,#0d6efd,#001f3f);color:white;padding:80px 20px;text-align:center}
-header h1{font-size:42px;margin-bottom:15px}
 header p{font-size:18px;margin-bottom:30px;opacity:.9}
+
 .btn{display:inline-block;padding:14px 30px;margin:8px;border-radius:30px;text-decoration:none;font-weight:600;transition:.3s}
 .primary{background:white;color:#0d6efd}
 .secondary{background:#25D366;color:white}
+
 section{padding:70px 20px;text-align:center}
 .services{background:white}
 .services h2{font-size:32px;margin-bottom:40px}
@@ -22,37 +26,83 @@ section{padding:70px 20px;text-align:center}
 .service-box{background:#f9fafc;padding:30px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,0.05);transition:.3s}
 .service-box:hover{transform:translateY(-8px);box-shadow:0 8px 25px rgba(0,0,0,0.1)}
 .service-box i{font-size:35px;color:#0d6efd;margin-bottom:15px}
+
 #contact{background:#0d6efd;color:white}
 #quotation{background:#f5f7fb}
 form{max-width:650px;margin:30px auto;background:white;padding:40px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.08)}
 input,select,textarea{width:100%;padding:14px;margin:12px 0;border-radius:8px;border:1px solid #ddd;font-family:'Poppins'}
 button{padding:14px 25px;background:#0d6efd;color:white;border:none;border-radius:30px;font-weight:600;cursor:pointer}
+
 .whatsapp-float{position:fixed;width:65px;height:65px;bottom:25px;right:25px;background:#25D366;color:#FFF;border-radius:50%;text-align:center;font-size:32px;box-shadow:0 8px 20px rgba(0,0,0,0.2);z-index:100;display:flex;align-items:center;justify-content:center}
 footer{background:#001f3f;color:white;text-align:center;padding:20px;font-size:14px}
+
+/* ✅ Logo + Company Name */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.logo-container a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo{
+  height: 62px;
+  width: auto;
+  margin-right: 14px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.08);
+  padding: 6px;
+}
+
+.company-name{
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1;
+}
 </style>
 
 <script>
 function submitForm(e){
- e.preventDefault();
- var name=document.getElementById('name').value;
- var phone=document.getElementById('phone').value;
- var email=document.getElementById('email').value;
- var service=document.getElementById('service').value;
- var message=document.getElementById('message').value;
- var whatsappURL="https://wa.me/919560291565?text="+
- "New Enquiry:%0AName: "+name+"%0APhone: "+phone+"%0AEmail: "+email+"%0AService: "+service+"%0AMessage: "+message;
- window.open(whatsappURL,'_blank');
+  e.preventDefault();
+  var name=document.getElementById('name').value;
+  var phone=document.getElementById('phone').value;
+  var email=document.getElementById('email').value;
+  var service=document.getElementById('service').value;
+  var message=document.getElementById('message').value;
+
+  var whatsappURL="https://wa.me/919560291565?text="+
+    "New Enquiry:%0AName: "+encodeURIComponent(name)+
+    "%0APhone: "+encodeURIComponent(phone)+
+    "%0AEmail: "+encodeURIComponent(email)+
+    "%0AService: "+encodeURIComponent(service)+
+    "%0AMessage: "+encodeURIComponent(message);
+
+  window.open(whatsappURL,'_blank');
 }
 </script>
 
 </head>
-<body>
+<body id="top">
 
 <header>
-<h1>HMI Technology</h1>
-<p>Premium IT, Zoho & Digital Solutions in Gurgaon & Across India</p>
-<a href="#contact" class="btn primary">Contact Us</a>
-<a href="#quotation" class="btn secondary">Get Free Quotation</a>
+  <!-- ✅ Logo + Company Name (click = Home / Top) -->
+  <div class="logo-container">
+    <a href="#top" aria-label="Go to Home">
+      <img src="logo.png" alt="HMI Technology Logo" class="logo">
+      <span class="company-name">HMI Technology</span>
+    </a>
+  </div>
+
+  <p>Premium IT, Zoho & Digital Solutions in Gurgaon & Across India</p>
+  <a href="#contact" class="btn primary">Contact Us</a>
+  <a href="#quotation" class="btn secondary">Get Free Quotation</a>
 </header>
 
 <section class="services">
@@ -176,6 +226,7 @@ function submitForm(e){
 <input type="text" id="name" placeholder="Your Name" required>
 <input type="text" id="phone" placeholder="Your Contact Number" required>
 <input type="email" id="email" placeholder="Your Email" required>
+
 <select id="service" required>
 <option value="">Select Required Service</option>
 <option>Website Development</option>
@@ -183,13 +234,17 @@ function submitForm(e){
 <option>SEO & Digital Marketing</option>
 <option>Zoho Implementation</option>
 <option>Zoho Customization</option>
+<option>ERPNext Customization</option>
+<option>eCommerce Development</option>
+<option>AWS Server Management</option>
 </select>
+
 <textarea id="message" rows="4" placeholder="Briefly describe your requirement..."></textarea>
 <button type="submit">Submit Request on WhatsApp</button>
 </form>
 </section>
 
-<a href="https://wa.me/919560291565" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/919560291565" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
 <i class="fab fa-whatsapp"></i>
 </a>
 
@@ -199,4 +254,3 @@ function submitForm(e){
 
 </body>
 </html>
-
