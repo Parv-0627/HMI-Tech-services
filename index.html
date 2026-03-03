@@ -4,54 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HMI Tech Services | ERP & IT Solutions in Gurgaon</title>
-    <meta name="description" content="HMI Tech Services provides ERPNext customization, Frappe development, accounting setup, server management and eCommerce solutions in Gurgaon and across India.">
+    <meta name="description" content="ERPNext customization, Frappe development, accounting, server and eCommerce solutions in Gurgaon and across India.">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background: #f1f5f9; color: #1e293b; }
-        header { background: white; padding: 20px 10%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index:1000; }
-        header img { height: 50px; }
-        header h1 { font-size: 22px; }
-        .btn { background: #1e3a8a; color: white; padding: 12px 22px; border-radius: 30px; text-decoration: none; font-weight: 600; display: inline-block; border:none; cursor:pointer; }
-        .hero { text-align: center; padding: 80px 10%; }
-        .hero h2 { font-size: 42px; margin-bottom: 20px; }
-        .hero p { max-width: 750px; margin: auto; color: #475569; margin-bottom: 30px; }
-        .services { padding: 60px 10%; }
-        .services h3 { text-align: center; font-size: 32px; margin-bottom: 40px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .card { background: white; padding: 25px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
-        .card h4 { margin-bottom: 10px; font-size: 20px; }
-        .card ul { padding-left: 18px; color: #475569; }
-        .cta { background: white; padding: 70px 10%; margin-top: 40px; }
-        .contact-info { text-align: center; margin-bottom: 40px; }
-        form { max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px; }
-        input, select, textarea { padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1; }
-        textarea { resize: vertical; min-height: 100px; }
-        footer { text-align: center; padding: 20px; background: #e2e8f0; font-size: 14px; margin-top: 40px; }
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+        body{background:#f1f5f9;color:#1e293b}
+        header{background:#fff;padding:20px 10%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000}
+        header img{height:50px}
+        header h1{font-size:22px}
+        .btn{background:#1e3a8a;color:#fff;padding:12px 22px;border-radius:30px;text-decoration:none;font-weight:600;display:inline-block}
+        .hero{text-align:center;padding:80px 10%}
+        .hero h2{font-size:42px;margin-bottom:20px}
+        .hero p{max-width:750px;margin:auto;color:#475569;margin-bottom:30px}
+        .services{padding:70px 10%}
+        .services h3{text-align:center;font-size:32px;margin-bottom:40px}
+        .service-detail{background:#fff;padding:30px;border-radius:20px;box-shadow:0 4px 15px rgba(0,0,0,0.05);margin-bottom:30px}
+        .service-detail h4{margin-bottom:15px;color:#1e3a8a}
+        .service-detail p{color:#475569;margin-bottom:10px}
+        .quotation{display:none;padding:70px 10%;background:#fff}
+        form{max-width:600px;margin:auto;display:flex;flex-direction:column;gap:15px}
+        input,select,textarea{padding:12px;border-radius:8px;border:1px solid #cbd5e1}
+        textarea{resize:vertical;min-height:100px}
+        footer{text-align:center;padding:20px;background:#e2e8f0;font-size:14px;margin-top:40px}
 
-        /* WhatsApp Floating Button */
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
-            z-index: 100;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            text-decoration:none;
-        }
+        /* WhatsApp Button */
+        .whatsapp-float{position:fixed;width:60px;height:60px;bottom:20px;right:20px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:2px 2px 10px rgba(0,0,0,0.2);z-index:100}
+        .whatsapp-float img{width:35px}
 
-        @media(max-width:768px){ .hero h2{font-size:28px;} }
+        @media(max-width:768px){.hero h2{font-size:28px}}
     </style>
+
+    <script>
+        function showQuotation(){
+            document.getElementById('quotationSection').style.display='block';
+            document.getElementById('quotationSection').scrollIntoView({behavior:'smooth'});
+        }
+    </script>
 </head>
 <body>
 
@@ -60,82 +48,51 @@
         <img src="logo.png" alt="HMI Logo">
         <h1>HMI Tech Services</h1>
     </div>
-    <a href="#contact" class="btn">Contact Us</a>
+    <a href="javascript:void(0)" onclick="showQuotation()" class="btn">Get Quotation</a>
 </header>
 
 <section class="hero">
     <h2>Complete IT & ERP Solutions for Your Business</h2>
-    <p>We provide professional ERPNext customization, accounting solutions, server management, eCommerce development, and Frappe-based application services across India. Based in Gurgaon, we serve clients nationwide.</p>
-    <a href="#contact" class="btn">Get Free Consultation</a>
+    <p>Professional ERPNext customization, accounting setup, server management and Frappe application development services from Gurgaon serving clients across India.</p>
+    <a href="javascript:void(0)" onclick="showQuotation()" class="btn">Get Free Consultation</a>
 </section>
 
 <section class="services">
-    <h3>Our Detailed Services</h3>
-    <div class="grid">
-        <div class="card">
-            <h4>ERPNext Customization</h4>
-            <ul>
-                <li>Complete ERPNext Implementation</li>
-                <li>Custom Fields & Workflow Automation</li>
-                <li>GST & Indian Compliance Setup</li>
-                <li>Module Integration</li>
-                <li>Data Migration & Training</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h4>Accounting & Financial Setup</h4>
-            <ul>
-                <li>Chart of Accounts Setup</li>
-                <li>Bank Reconciliation</li>
-                <li>GST Return Support</li>
-                <li>Financial Reports & MIS</li>
-                <li>Inventory Accounting</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h4>Server & Cloud Management</h4>
-            <ul>
-                <li>VPS & Cloud Deployment</li>
-                <li>ERPNext Server Setup</li>
-                <li>Security Hardening</li>
-                <li>Backup & Monitoring</li>
-                <li>Domain & SSL Setup</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h4>eCommerce Development</h4>
-            <ul>
-                <li>Online Store Development</li>
-                <li>Payment Gateway Integration</li>
-                <li>ERP + Website Integration</li>
-                <li>Inventory Sync</li>
-                <li>Custom Business Portals</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h4>Frappe Application Development</h4>
-            <ul>
-                <li>Custom Frappe Apps</li>
-                <li>API Integration</li>
-                <li>Automation Scripts</li>
-                <li>Business Process Digitization</li>
-                <li>Ongoing Support & AMC</li>
-            </ul>
-        </div>
+    <h3>Our Services</h3>
+
+    <div class="service-detail">
+        <h4>ERPNext Implementation & Customization</h4>
+        <p>We provide complete ERPNext setup including Accounts, HR, Sales, Purchase and Inventory modules.</p>
+        <p>Custom workflows, print formats, reports, user permissions and automation tailored to your business process.</p>
+    </div>
+
+    <div class="service-detail">
+        <h4>Accounting & GST Setup</h4>
+        <p>Full accounting configuration with proper Chart of Accounts structure.</p>
+        <p>GST compliance setup, reconciliation, MIS reports and financial dashboard creation.</p>
+    </div>
+
+    <div class="service-detail">
+        <h4>Server & Cloud Deployment</h4>
+        <p>ERPNext installation on VPS, AWS, DigitalOcean and other cloud platforms.</p>
+        <p>Domain setup, SSL installation, security hardening and automated backup systems.</p>
+    </div>
+
+    <div class="service-detail">
+        <h4>eCommerce & Website Integration</h4>
+        <p>Complete eCommerce website development with payment gateway integration.</p>
+        <p>ERP integration for real-time inventory sync and order management.</p>
+    </div>
+
+    <div class="service-detail">
+        <h4>Custom Frappe Application Development</h4>
+        <p>Custom business applications built on Frappe framework.</p>
+        <p>API integration, automation scripts and ongoing technical support.</p>
     </div>
 </section>
 
-<section class="cta" id="contact">
-    <div class="contact-info">
-        <h3>Contact Us</h3>
-        <p><strong>Phone:</strong> 9560291565</p>
-        <p><strong>Email:</strong> serviceshmitech@gmail.com</p>
-        <p><strong>Location:</strong> Gurgaon, Haryana, India</p>
-    </div>
-
-    <h3 style="text-align:center; margin-bottom:20px;">Get a Free Quotation</h3>
-
-    <!-- Replace YOUR_FORMSPREE_ID with your real Formspree ID -->
+<section id="quotationSection" class="quotation">
+    <h3 style="text-align:center;margin-bottom:30px">Get a Free Quotation</h3>
     <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="tel" name="phone" placeholder="Your Contact Number" required>
@@ -147,7 +104,6 @@
             <option>Server Management</option>
             <option>eCommerce Development</option>
             <option>Frappe App Development</option>
-            <option>Multiple Services</option>
         </select>
         <textarea name="details" placeholder="Briefly describe your requirement..."></textarea>
         <button type="submit" class="btn">Submit Request</button>
@@ -158,8 +114,9 @@
     © 2026 HMI Tech Services | Gurgaon, India | All Rights Reserved.
 </footer>
 
-<!-- WhatsApp Button -->
-<a href="https://wa.me/919560291565" class="whatsapp-float" target="_blank">💬</a>
+<a href="https://wa.me/919560291565" target="_blank" class="whatsapp-float">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
 
 </body>
 </html>
