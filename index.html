@@ -12,50 +12,80 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Poppins',sans-serif;background:#f5f7fb;color:#222}
 
-/* ✅ HEADER SMALLER */
+/* ===== PREMIUM HERO HEADER ===== */
+
 header{
-background:linear-gradient(135deg,#1e63d5,#001f3f);
+background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 color:white;
-padding:50px 20px;   /* 🔥 reduced from 80px */
-text-align:center;
+padding:60px 20px 80px;
 position:relative;
+overflow:hidden;
 }
 
-header h1{
-font-size:38px;
-margin-bottom:10px;
+/* subtle glow */
+header::after{
+content:"";
+position:absolute;
+width:350px;
+height:350px;
+background:rgba(255,255,255,0.05);
+filter:blur(120px);
+top:-100px;
+left:-100px;
 }
 
-header p{
-font-size:17px;
-margin-bottom:25px;
-opacity:.9;
-}
-
-/* ✅ Logo Top Right */
+/* Logo Left */
 .top-logo{
 position:absolute;
-top:20px;
-right:30px;
+top:25px;
+left:40px;
 }
 
 .top-logo img{
-height:55px;
-border-radius:8px;
-background:white;
-padding:5px;
-cursor:pointer;
+height:60px;
+padding:8px;
+border-radius:14px;
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
+box-shadow:0 8px 25px rgba(0,0,0,0.25);
+transition:0.3s;
 }
 
-/* Buttons */
+.top-logo img:hover{
+transform:scale(1.05);
+}
+
+/* Hero Content Center */
+.hero-content{
+text-align:center;
+max-width:850px;
+margin:0 auto;
+}
+
+.hero-content h1{
+font-size:42px;
+font-weight:700;
+margin-bottom:15px;
+letter-spacing:1px;
+}
+
+.hero-content p{
+font-size:18px;
+opacity:0.9;
+margin-bottom:35px;
+line-height:1.6;
+}
+
+/* Premium Buttons */
 .btn{
 display:inline-block;
-padding:14px 30px;
-margin:8px;
-border-radius:30px;
+padding:14px 32px;
+margin:10px;
+border-radius:40px;
 text-decoration:none;
 font-weight:600;
-transition:.3s;
+transition:0.3s ease;
 }
 
 .primary{
@@ -63,9 +93,19 @@ background:white;
 color:#0d6efd;
 }
 
+.primary:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
 .secondary{
 background:#25D366;
 color:white;
+}
+
+.secondary:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
 
 /* Sections */
@@ -197,21 +237,22 @@ window.open(whatsappURL,'_blank');
 
 <header>
 
-<!-- ✅ Logo Top Right -->
+<!-- Logo Left -->
 <div class="top-logo">
 <a href="#top">
 <img src="logo.png" alt="HMI Logo">
 </a>
 </div>
 
+<div class="hero-content">
 <h1>HMI Technology Services</h1>
-
 <p>
 Premium IT, ERP Next Customization & Digital Solutions in Gurgaon & Across India
 </p>
 
 <a href="#contact" class="btn primary">Contact Us</a>
 <a href="#quotation" class="btn secondary">Get Free Quotation</a>
+</div>
 
 </header>
 
@@ -232,15 +273,15 @@ Premium IT, ERP Next Customization & Digital Solutions in Gurgaon & Across India
 </div>
 
 <div class="service-box">
-<i class="fas fa-chart-line"></i>
-<h3>SEO & Digital Marketing</h3>
-<p>Google ranking, paid ads & complete online branding strategies.</p>
+<i class="fas fa-database"></i>
+<h3>ERPNext Customization</h3>
+<p>Module customization, reports, workflows & integrations tailored to your business.</p>
 </div>
 
 <div class="service-box">
-<i class="fas fa-building"></i>
-<h3>Zoho</h3>
-<p>Zoho CRM, Books, Inventory & full business automation solutions.</p>
+<i class="fas fa-chart-line"></i>
+<h3>SEO & Digital Marketing</h3>
+<p>Google ranking, paid ads & complete online branding strategies.</p>
 </div>
 
 </div>
@@ -263,9 +304,8 @@ Premium IT, ERP Next Customization & Digital Solutions in Gurgaon & Across India
 <option value="">Select Required Service</option>
 <option>Website Development</option>
 <option>Software Development</option>
-<option>SEO & Digital Marketing</option>
-<option>Zoho Implementation</option>
 <option>ERPNext Customization</option>
+<option>SEO & Digital Marketing</option>
 </select>
 <textarea id="message" rows="4" placeholder="Briefly describe your requirement..."></textarea>
 <button type="submit">Submit Request on WhatsApp</button>
