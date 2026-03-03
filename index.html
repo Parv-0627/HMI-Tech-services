@@ -1,73 +1,83 @@
-import React from "react";
-            <CardContent className="p-6">
-              <Settings className="w-10 h-10 mb-4" />
-              <h4 className="text-xl font-semibold mb-2">ERPNext Customization</h4>
-              <p className="text-slate-600">
-                Complete ERPNext setup, module customization, workflow automation, and integration
-                tailored to your business needs.
-              </p>
-            </CardContent>
-          </Card>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMI Tech Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background: #f1f5f9; color: #1e293b; }
+        header { background: white; padding: 20px 10%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        header img { height: 50px; }
+        header h1 { font-size: 22px; }
+        .btn { background: #1e3a8a; color: white; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: 600; }
+        .hero { text-align: center; padding: 80px 10%; }
+        .hero h2 { font-size: 40px; margin-bottom: 20px; }
+        .hero p { max-width: 700px; margin: auto; color: #475569; margin-bottom: 30px; }
+        .services { padding: 60px 10%; }
+        .services h3 { text-align: center; font-size: 30px; margin-bottom: 40px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+        .card { background: white; padding: 25px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
+        .card h4 { margin-bottom: 10px; }
+        .cta { background: white; text-align: center; padding: 70px 10%; margin-top: 40px; }
+        footer { text-align: center; padding: 20px; background: #e2e8f0; font-size: 14px; }
+        @media(max-width:768px){ .hero h2{font-size:28px;} }
+    </style>
+</head>
+<body>
 
-          <Card className="rounded-2xl shadow-md hover:shadow-xl transition">
-            <CardContent className="p-6">
-              <Database className="w-10 h-10 mb-4" />
-              <h4 className="text-xl font-semibold mb-2">Accounting Solutions</h4>
-              <p className="text-slate-600">
-                Professional accounting setup, GST configuration, reconciliation, and financial
-                reporting using ERP systems.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="rounded-2xl shadow-md hover:shadow-xl transition">
-            <CardContent className="p-6">
-              <Server className="w-10 h-10 mb-4" />
-              <h4 className="text-xl font-semibold mb-2">Server Management</h4>
-              <p className="text-slate-600">
-                Cloud server setup, VPS configuration, security hardening, backups, and ongoing
-                maintenance services.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="rounded-2xl shadow-md hover:shadow-xl transition">
-            <CardContent className="p-6">
-              <ShoppingCart className="w-10 h-10 mb-4" />
-              <h4 className="text-xl font-semibold mb-2">eCommerce Development</h4>
-              <p className="text-slate-600">
-                Complete online store development, payment gateway integration, and ERP
-                integration for seamless operations.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="rounded-2xl shadow-md hover:shadow-xl transition">
-            <CardContent className="p-6">
-              <Cloud className="w-10 h-10 mb-4" />
-              <h4 className="text-xl font-semibold mb-2">Frappe Development</h4>
-              <p className="text-slate-600">
-                Custom Frappe app development, API integration, automation tools, and scalable
-                business applications.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-20 px-6 md:px-16 bg-white text-center">
-        <h3 className="text-3xl font-bold mb-6">Ready to Grow Your Business?</h3>
-        <p className="text-slate-600 mb-8 max-w-2xl mx-auto">
-          Partner with HMI Tech Services for reliable IT solutions and scalable ERP systems.
-        </p>
-        <Button className="rounded-2xl px-8 py-6 text-lg">Request a Quote</Button>
-      </section>
-
-      {/* Footer */}
-      <footer className="py-8 text-center text-sm text-slate-500 bg-slate-100">
-        © {new Date().getFullYear()} HMI Tech Services. All Rights Reserved.
-      </footer>
+<header>
+    <div style="display:flex;align-items:center;gap:10px;">
+        <img src="logo.png" alt="HMI Logo">
+        <h1>HMI Tech Services</h1>
     </div>
-  );
-}
+    <a href="#contact" class="btn">Contact Us</a>
+</header>
+
+<section class="hero">
+    <h2>Complete IT & ERP Solutions for Your Business</h2>
+    <p>We provide professional ERPNext customization, accounting solutions, server management, eCommerce development, and Frappe-based application services across India.</p>
+    <a href="#contact" class="btn">Get Free Consultation</a>
+</section>
+
+<section class="services">
+    <h3>Our Services</h3>
+    <div class="grid">
+        <div class="card">
+            <h4>ERPNext Customization</h4>
+            <p>Complete ERPNext setup, module customization, workflow automation, and integration tailored to your business needs.</p>
+        </div>
+        <div class="card">
+            <h4>Accounting Solutions</h4>
+            <p>Professional accounting setup, GST configuration, reconciliation, and financial reporting using ERP systems.</p>
+        </div>
+        <div class="card">
+            <h4>Server Management</h4>
+            <p>Cloud server setup, VPS configuration, security hardening, backups, and ongoing maintenance services.</p>
+        </div>
+        <div class="card">
+            <h4>eCommerce Development</h4>
+            <p>Complete online store development, payment gateway integration, and ERP integration for seamless operations.</p>
+        </div>
+        <div class="card">
+            <h4>Frappe Development</h4>
+            <p>Custom Frappe app development, API integration, automation tools, and scalable business applications.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta" id="contact">
+    <h3>Ready to Grow Your Business?</h3>
+    <p>Partner with HMI Tech Services for reliable IT solutions and scalable ERP systems.</p>
+    <br>
+    <a href="mailto:your@email.com" class="btn">Request a Quote</a>
+</section>
+
+<footer>
+    © 2026 HMI Tech Services. All Rights Reserved.
+</footer>
+
+</body>
+</html>
