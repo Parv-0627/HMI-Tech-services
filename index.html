@@ -406,9 +406,13 @@ typeEffect();
 /* BACKGROUND IMAGES (TECH ONLY) */
 
 const images=[
-"https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-"https://images.unsplash.com/photo-1518779578993-ec3579fee39f",
-"https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+
+"https://images.unsplash.com/photo-1518770660439-4636190af475",
+
+"https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
+
+"https://images.unsplash.com/photo-1517430816045-df4b7de11d1d"
+
 ];
 
 let i=0;
@@ -419,15 +423,17 @@ document.querySelector("header").style.backgroundImage="url("+images[i]+")";
 
 i++;
 
-if(i==images.length){i=0;}
+if(i==images.length){
+i=0;
+}
 
 }
 
 changeBackground();
 
 setInterval(changeBackground,4000);
-
 </script>
 
 </body>
 </html>
+
