@@ -15,396 +15,417 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HMI Technology Services - Premium IT & ERPNext Services</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 <style>
+
 *{margin:0;padding:0;box-sizing:border-box}
+
 body{font-family:'Poppins',sans-serif;background:#f5f7fb;color:#222}
 
-/* ===== PREMIUM HEADER (only header improved) ===== */
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:white;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+z-index:1000
+}
+
+nav .logo{
+font-size:22px;
+font-weight:700;
+color:#0d6efd
+}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:30px
+}
+
+nav ul li a{
+text-decoration:none;
+color:#333;
+font-weight:500
+}
+
+/* HERO INTRO */
+
 header{
-  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-  color:#fff;
-  padding:58px 20px 72px;  /* header ko smaller/clean */
-  text-align:center;
-  position:relative;
-  overflow:hidden;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+background-size:cover;
+background-position:center;
+transition:background-image 1s ease-in-out;
+position:relative
 }
 
-/* subtle glow */
 header::after{
-  content:"";
-  position:absolute;
-  width:420px;
-  height:420px;
-  background:rgba(255,255,255,0.06);
-  filter:blur(140px);
-  top:-140px;
-  left:-140px;
-  pointer-events:none;
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6)
 }
 
-/* Logo LEFT + glass transparent container */
-.top-logo{
-  position:absolute;
-  top:18px;
-  left:22px;
-  z-index:2;
+.hero-content{
+position:relative;
+z-index:2;
+max-width:700px
 }
-
-.top-logo a{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width:76px;
-  height:76px;
-  border-radius:16px;
-  background:rgba(255,255,255,0.12);
-  border:1px solid rgba(255,255,255,0.18);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-  transition:0.25s ease;
-  text-decoration:none;
-}
-
-.top-logo a:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 14px 40px rgba(0,0,0,0.30);
-}
-
-.top-logo img{
-  height:48px;
-  width:auto;
-  display:block;
-}
-
-/* NOTE:
-   Agar logo.png me white background already hai,
-   to CSS se usko truly transparent nahi bana sakte.
-   Transparent chahiye to logo PNG ko transparent background me export karna padega. */
 
 header h1{
-  font-size:44px;
-  font-weight:700;
-  margin:0 0 12px;
-  letter-spacing:0.6px;
+font-size:42px;
+margin-bottom:10px
 }
 
 header p{
-  font-size:18px;
-  margin:0 auto 28px;
-  opacity:.92;
-  max-width:820px;
-  line-height:1.6;
+font-size:18px;
+margin-bottom:25px
 }
 
-/* Buttons (same but premium hover) */
 .btn{
-  display:inline-block;
-  padding:14px 30px;
-  margin:8px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:600;
-  transition:.25s ease;
+display:inline-block;
+padding:14px 30px;
+margin:5px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600
 }
 
 .primary{background:#fff;color:#0d6efd}
 .secondary{background:#25D366;color:#fff}
 
-.btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 10px 25px rgba(0,0,0,0.18);
-}
-
-/* ===== Original sections (UNCHANGED) ===== */
 section{padding:70px 20px;text-align:center}
-.services{background:white}
-.services h2{font-size:32px;margin-bottom:40px}
+
+/* SERVICES */
 
 .service-container{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-  max-width:1100px;
-  margin:auto
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+max-width:1100px;
+margin:auto
 }
 
 .service-box{
-  background:#f9fafc;
-  padding:30px;
-  border-radius:15px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.05);
-  transition:.3s
+background:#f9fafc;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+transition:.3s
 }
-.service-box:hover{transform:translateY(-8px);box-shadow:0 8px 25px rgba(0,0,0,0.1)}
-.service-box i{font-size:35px;color:#0d6efd;margin-bottom:15px}
+
+.service-box:hover{
+transform:translateY(-8px);
+box-shadow:0 8px 25px rgba(0,0,0,0.1)
+}
+
+.service-box i{
+font-size:35px;
+color:#0d6efd;
+margin-bottom:15px
+}
+
+/* CONTACT */
 
 #contact{background:#0d6efd;color:white}
 #quotation{background:#f5f7fb}
 
 form{
-  max-width:650px;
-  margin:30px auto;
-  background:white;
-  padding:40px;
-  border-radius:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08)
+max-width:650px;
+margin:30px auto;
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08)
 }
 
 input,select,textarea{
-  width:100%;
-  padding:14px;
-  margin:12px 0;
-  border-radius:8px;
-  border:1px solid #ddd;
-  font-family:'Poppins'
+width:100%;
+padding:14px;
+margin:12px 0;
+border-radius:8px;
+border:1px solid #ddd
 }
 
 button{
-  padding:14px 25px;
-  background:#0d6efd;
-  color:white;
-  border:none;
-  border-radius:30px;
-  font-weight:600;
-  cursor:pointer
+padding:14px 25px;
+background:#0d6efd;
+color:white;
+border:none;
+border-radius:30px;
+font-weight:600;
+cursor:pointer
 }
 
+/* WHATSAPP FLOAT */
+
 .whatsapp-float{
-  position:fixed;
-  width:65px;
-  height:65px;
-  bottom:25px;
-  right:25px;
-  background:#25D366;
-  color:#FFF;
-  border-radius:50%;
-  text-align:center;
-  font-size:32px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.2);
-  z-index:100;
-  display:flex;
-  align-items:center;
-  justify-content:center
+position:fixed;
+width:65px;
+height:65px;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:#FFF;
+border-radius:50%;
+font-size:32px;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+z-index:100;
+display:flex;
+align-items:center;
+justify-content:center
 }
 
 footer{
-  background:#001f3f;
-  color:white;
-  text-align:center;
-  padding:20px;
-  font-size:14px
+background:#001f3f;
+color:white;
+text-align:center;
+padding:20px;
+font-size:14px
 }
+
 </style>
 
 <script>
+
 function submitForm(e){
- e.preventDefault();
- var name=document.getElementById('name').value;
- var phone=document.getElementById('phone').value;
- var email=document.getElementById('email').value;
- var service=document.getElementById('service').value;
- var message=document.getElementById('message').value;
 
- var whatsappURL="https://wa.me/919560291565?text="+
- "New Enquiry:%0AName: "+encodeURIComponent(name)+
- "%0APhone: "+encodeURIComponent(phone)+
- "%0AEmail: "+encodeURIComponent(email)+
- "%0AService: "+encodeURIComponent(service)+
- "%0AMessage: "+encodeURIComponent(message);
+e.preventDefault();
 
- window.open(whatsappURL,'_blank');
+var name=document.getElementById('name').value;
+var phone=document.getElementById('phone').value;
+var email=document.getElementById('email').value;
+var service=document.getElementById('service').value;
+var message=document.getElementById('message').value;
+
+var whatsappURL="https://wa.me/919560291565?text="+
+"New Enquiry:%0AName: "+encodeURIComponent(name)+
+"%0APhone: "+encodeURIComponent(phone)+
+"%0AEmail: "+encodeURIComponent(email)+
+"%0AService: "+encodeURIComponent(service)+
+"%0AMessage: "+encodeURIComponent(message);
+
+window.open(whatsappURL,'_blank');
+
 }
+
 </script>
 
 </head>
+
 <body id="top">
 
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">HMI Tech</div>
+
+<ul>
+
+<li><a href="#top">Intro</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
 <header>
-  <!-- Logo left + click to home -->
-  <div class="top-logo">
-    <a href="#top" aria-label="Go to Home">
-      <img src="logo.png" alt="HMI Technology Logo">
-    </a>
-  </div>
 
-  <h1>HMI Technology Services</h1>
-  <p>Premium IT, ERP Next Customization & Digital Solutions in Gurgaon & Across India</p>
+<div class="hero-content">
 
-  <a href="#contact" class="btn primary">Contact Us</a>
-  <a href="#quotation" class="btn secondary">Get Free Quotation</a>
+<h1>HMI Technology Services</h1>
+
+<p>Premium IT, ERPNext Customization & Digital Solutions</p>
+
+<a href="#contact" class="btn primary">Contact Us</a>
+
+<a href="#quotation" class="btn secondary">Get Free Quotation</a>
+
+</div>
+
 </header>
 
-<section class="services">
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2>About Us</h2>
+
+<p style="max-width:700px;margin:auto;margin-top:20px">
+
+HMI Technology provides ERPNext customization, Zoho implementation, server setup, ecommerce development and accounting ERP solutions across India.
+
+</p>
+
+</section>
+
+<!-- SERVICES (UNCHANGED) -->
+
+<section id="services" class="services">
+
 <h2>Our Premium Services</h2>
+
 <div class="service-container">
 
-  <div class="service-box">
-    <i class="fas fa-laptop-code"></i>
-    <h3>Website Development</h3>
-    <p>Modern business websites & eCommerce platforms designed for speed and conversions.</p>
-  </div>
+<div class="service-box">
+<i class="fas fa-laptop-code"></i>
+<h3>Website Development</h3>
+<p>Modern business websites & eCommerce platforms designed for speed and conversions.</p>
+</div>
 
-  <div class="service-box">
-    <i class="fas fa-cogs"></i>
-    <h3>Custom Software Development</h3>
-    <p>Billing systems, ERP solutions & workflow automation tools for growing businesses.</p>
-  </div>
+<div class="service-box">
+<i class="fas fa-cogs"></i>
+<h3>Custom Software Development</h3>
+<p>Billing systems, ERP solutions & workflow automation tools for growing businesses.</p>
+</div>
 
-  <div class="service-box">
-    <i class="fas fa-chart-line"></i>
-    <h3>SEO & Digital Marketing</h3>
-    <p>Google ranking, paid ads & complete online branding strategies.</p>
-  </div>
+<div class="service-box">
+<i class="fas fa-chart-line"></i>
+<h3>SEO & Digital Marketing</h3>
+<p>Google ranking, paid ads & complete online branding strategies.</p>
+</div>
 
-  <div class="service-box">
-    <i class="fas fa-building"></i>
-    <h3>Zoho Implementation</h3>
-    <p>Zoho CRM setup, Zoho Books, Zoho Inventory, Zoho People & full business automation solutions.</p>
-  </div>
+<div class="service-box">
+<i class="fas fa-building"></i>
+<h3>Zoho Implementation</h3>
+<p>Zoho CRM setup, Zoho Books, Zoho Inventory, Zoho People & full business automation solutions.</p>
+</div>
 
-  <div class="service-box">
-    <i class="fas fa-plug"></i>
-    <h3>Zoho Customization & Integration</h3>
-    <p>Zoho API integrations, custom modules, workflow automation & third-party app connectivity.</p>
-  </div>
+<div class="service-box">
+<i class="fas fa-plug"></i>
+<h3>Zoho Customization & Integration</h3>
+<p>Zoho API integrations, custom modules, workflow automation & third-party app connectivity.</p>
+</div>
 
-  <div class="service-box">
-    <i class="fas fa-database"></i>
-    <h3>ERPNext Customization</h3>
-    <p>ERPNext module customization, print format design, workflow automation, reports development and third-party integrations tailored to your business process.</p>
-  </div>
+<div class="service-box">
+<i class="fas fa-database"></i>
+<h3>ERPNext Customization</h3>
+<p>ERPNext module customization, print format design, workflow automation, reports development and third-party integrations tailored to your business process.</p>
+</div>
 
-  <div class="service-box">
-    <i class="fas fa-shopping-cart"></i>
-    <h3>eCommerce Development</h3>
-    <p>Complete eCommerce solutions including Shopify, WooCommerce, custom online stores, payment gateway integration and performance optimization.</p>
-  </div>
+<div class="service-box">
+<i class="fas fa-shopping-cart"></i>
+<h3>eCommerce Development</h3>
+<p>Complete eCommerce solutions including Shopify, WooCommerce, custom online stores, payment gateway integration and performance optimization.</p>
+</div>
 
-  <div class="service-box">
-    <i class="fas fa-cloud"></i>
-    <h3>AWS Server Management</h3>
-    <p>AWS EC2 setup, server deployment, security configuration, backup management, monitoring and performance optimization for scalable infrastructure.</p>
-  </div>
+<div class="service-box">
+<i class="fas fa-cloud"></i>
+<h3>AWS Server Management</h3>
+<p>AWS EC2 setup, server deployment, security configuration, backup management, monitoring and performance optimization.</p>
+</div>
 
 </div>
+
 </section>
 
-<section style="background:#eef2f7;">
-<h2>Why Choose HMI Technology?</h2>
-<div class="service-container">
-
-  <div class="service-box">
-    <i class="fas fa-user-tie"></i>
-    <h3>Expert Consultation</h3>
-    <p>We provide professional IT & business automation consultation tailored to your company goals.</p>
-  </div>
-
-  <div class="service-box">
-    <i class="fas fa-rocket"></i>
-    <h3>Fast Delivery</h3>
-    <p>Quick project execution with high performance standards and scalable architecture.</p>
-  </div>
-
-  <div class="service-box">
-    <i class="fas fa-headset"></i>
-    <h3>Dedicated Support</h3>
-    <p>Ongoing technical support, maintenance and optimization services.</p>
-  </div>
-
-  <div class="service-box">
-    <i class="fas fa-shield-halved"></i>
-    <h3>Secure & Reliable</h3>
-    <p>Data security, server protection and reliable cloud infrastructure management.</p>
-  </div>
-
-</div>
-</section>
-
-<section style="background:white;">
-<h2>What Our Clients Say</h2>
-<div class="service-container">
-
-  <div class="service-box">
-    <p>"HMI Technology helped us implement Zoho CRM and automate our entire sales process. Highly professional team!"</p>
-    <h4>- Business Owner, Gurgaon</h4>
-  </div>
-
-  <div class="service-box">
-    <p>"ERPNext customization was done exactly as per our requirement. Excellent support and quick response."</p>
-    <h4>- Manufacturing Client</h4>
-  </div>
-
-  <div class="service-box">
-    <p>"They developed our eCommerce website and improved our Google ranking within months."</p>
-    <h4>- eCommerce Brand</h4>
-  </div>
-
-</div>
-</section>
+<!-- CONTACT -->
 
 <section id="contact">
+
 <h2>Contact Us</h2>
+
 <p><strong>Phone:</strong> 9560291565</p>
 <p><strong>Email:</strong> serviceshmitech@gmail.com</p>
 <p><strong>Location:</strong> Gurgaon, Haryana, India</p>
+
 </section>
+
+<!-- QUOTATION -->
 
 <section id="quotation">
+
 <h2>Get a Free Quotation</h2>
+
 <form onsubmit="submitForm(event)">
-  <input type="text" id="name" placeholder="Your Name" required>
-  <input type="text" id="phone" placeholder="Your Contact Number" required>
-  <input type="email" id="email" placeholder="Your Email" required>
 
-  <select id="service" required>
-    <option value="">Select Required Service</option>
-    <option>Website Development</option>
-    <option>Software Development</option>
-    <option>SEO & Digital Marketing</option>
-    <option>Zoho Implementation</option>
-    <option>Zoho Customization & Integration</option>
-    <option>ERPNext Customization</option>
-    <option>eCommerce Development</option>
-    <option>AWS Server Management</option>
-  </select>
+<input type="text" id="name" placeholder="Your Name" required>
 
-  <textarea id="message" rows="4" placeholder="Briefly describe your requirement..."></textarea>
-  <button type="submit">Submit Request on WhatsApp</button>
+<input type="text" id="phone" placeholder="Your Contact Number" required>
+
+<input type="email" id="email" placeholder="Your Email" required>
+
+<select id="service" required>
+
+<option value="">Select Required Service</option>
+
+<option>Website Development</option>
+<option>Software Development</option>
+<option>SEO & Digital Marketing</option>
+<option>Zoho Implementation</option>
+<option>Zoho Customization & Integration</option>
+<option>ERPNext Customization</option>
+<option>eCommerce Development</option>
+<option>AWS Server Management</option>
+
+</select>
+
+<textarea id="message" rows="4" placeholder="Briefly describe your requirement..."></textarea>
+
+<button type="submit">Submit Request on WhatsApp</button>
+
 </form>
+
 </section>
 
-<a href="https://wa.me/919560291565" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-  <i class="fab fa-whatsapp"></i>
+<a href="https://wa.me/919560291565" class="whatsapp-float" target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
 </a>
 
 <footer>
+
 © 2026 HMI Technology Services | IT & Zoho Experts
+
 </footer>
 
-<body>
+<script>
 
-<h1>Welcome to HMI Technology</h1>
-<p>We provide ERP and IT services.</p>
+const images=[
+"https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+"https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
+"https://images.unsplash.com/photo-1518779578993-ec3579fee39f"
+];
 
-<h2>Our Services</h2>
+let i=0;
 
-<ul>
-<li><a href="/erpnext-service.html">ERPNext Implementation & Customization</a></li>
-<li><a href="/zoho-implementation.html">Zoho Implementation Services</a></li>
-<li><a href="/server-setup.html">Server Setup & Management</a></li>
-<li><a href="/ecommerce-development.html">Ecommerce Website Development</a></li>
-<li><a href="/accounting-erp.html">Accounting ERP Solutions</a></li>
-</ul>
+function changeBackground(){
+
+document.querySelector("header").style.backgroundImage="url("+images[i]+")";
+
+i++;
+
+if(i==images.length){
+i=0;
+}
+
+}
+
+changeBackground();
+
+setInterval(changeBackground,4000);
+
+</script>
 
 </body>
 </html>
-
-
