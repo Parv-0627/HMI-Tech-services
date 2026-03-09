@@ -1,434 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ERPNext Customization | Zoho Implementation | Server Setup | Ecommerce & Accounting ERP | HMI Technology</title>
-
-<meta name="description" content="HMI Technology provides ERPNext customization, Zoho implementation, server setup, ecommerce development and accounting ERP solutions in India.">
-
-<meta name="keywords" content="ERPNext customization, ERPNext implementation, Zoho implementation, server setup service, ecommerce development, accounting ERP, Frappe developer, ERPNext support India">
-
+<title>HMI Technology Services</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-
+/* ===== Reset ===== */
 *{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#f5f7fb;color:#222;scroll-behavior:smooth;}
 
-body{font-family:'Poppins',sans-serif;background:#f5f7fb;color:#222}
-
-/* NAVBAR */
-
+/* ===== NAVBAR ===== */
 nav{
-position:fixed;
-top:0;
-width:100%;
-background:white;
-padding:15px 40px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
-z-index:1000
+  position:fixed;
+  top:0;
+  width:100%;
+  background:white;
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 3px 10px rgba(0,0,0,0.1);
+  z-index:1000;
 }
+nav .logo{font-size:22px;font-weight:700;color:#0d6efd}
+nav ul{list-style:none;display:flex;gap:30px}
+nav ul li a{text-decoration:none;color:#333;font-weight:500;transition:.3s;}
+nav ul li a:hover{color:#0d6efd;}
 
-nav .logo{
-font-size:22px;
-font-weight:700;
-color:#0d6efd
-}
-
-nav ul{
-list-style:none;
-display:flex;
-gap:30px
-}
-
-nav ul li a{
-text-decoration:none;
-color:#333;
-font-weight:500
-}
-
-/* HERO INTRO */
-
+/* ===== HERO INTRO ===== */
 header{
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
-background-size:cover;
-background-position:center;
-transition:background-image 1s ease-in-out;
-position:relative
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  background-size:cover;
+  background-position:center;
+  transition:background-image 1s ease-in-out;
+  position:relative;
 }
-
 header::after{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.6)
+  content:"";
+  position:absolute;
+  top:0;left:0;width:100%;height:100%;
+  background:rgba(0,0,0,0.6);
 }
-
 .hero-content{
-position:relative;
-z-index:2;
-max-width:700px
+  position:relative;
+  z-index:2;
+  max-width:700px;
 }
+header h1{font-size:42px;margin-bottom:10px;}
 
-header h1{
-font-size:46px;
-margin-bottom:20px
+/* ===== SECTION STYLING ===== */
+section{
+  padding:100px 20px;
+  text-align:center;
 }
+section h2{font-size:32px;margin-bottom:30px;color:#0d6efd}
+section p{max-width:800px;margin:auto;font-size:18px;line-height:1.7;color:#444}
 
-#typing{
-color:#00d4ff;
-border-right:3px solid white;
-padding-right:5px
-}
-
-.btn{
-display:inline-block;
-padding:14px 30px;
-margin:5px;
-border-radius:30px;
-text-decoration:none;
-font-weight:600
-}
-
-.primary{background:#fff;color:#0d6efd}
-.secondary{background:#25D366;color:#fff}
-
-section{padding:70px 20px;text-align:center}
-
-/* SERVICES */
-
+/* ===== SERVICES ===== */
 .service-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-max-width:1100px;
-margin:auto
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  max-width:1100px;
+  margin:auto;
 }
-
 .service-box{
-background:#f9fafc;
-padding:30px;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
-transition:.3s
+  background:#f9fafc;
+  padding:30px;
+  border-radius:15px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.05);
+  transition:.3s;
 }
-
 .service-box:hover{
-transform:translateY(-8px);
-box-shadow:0 8px 25px rgba(0,0,0,0.1)
+  transform:translateY(-8px);
+  box-shadow:0 8px 25px rgba(0,0,0,0.1);
 }
-
 .service-box i{
-font-size:35px;
-color:#0d6efd;
-margin-bottom:15px
+  font-size:35px;
+  color:#0d6efd;
+  margin-bottom:15px;
 }
 
-/* CONTACT */
-
+/* ===== CONTACT ===== */
 #contact{background:#0d6efd;color:white}
-#quotation{background:#f5f7fb}
+#contact p{color:white;font-size:18px;margin-bottom:12px}
 
-form{
-max-width:650px;
-margin:30px auto;
-background:white;
-padding:40px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08)
+/* ===== SMOOTH BUTTONS ===== */
+.btn{
+  display:inline-block;
+  padding:14px 30px;
+  margin:5px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  transition:.25s ease;
 }
+.primary{background:#fff;color:#0d6efd}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(0,0,0,0.18);}
 
-input,select,textarea{
-width:100%;
-padding:14px;
-margin:12px 0;
-border-radius:8px;
-border:1px solid #ddd
-}
-
-button{
-padding:14px 25px;
-background:#0d6efd;
-color:white;
-border:none;
-border-radius:30px;
-font-weight:600;
-cursor:pointer
-}
-
-/* WHATSAPP FLOAT */
-
-.whatsapp-float{
-position:fixed;
-width:65px;
-height:65px;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:#FFF;
-border-radius:50%;
-font-size:32px;
-box-shadow:0 8px 20px rgba(0,0,0,0.2);
-z-index:100;
-display:flex;
-align-items:center;
-justify-content:center
-}
-
+/* ===== FOOTER ===== */
 footer{
-background:#001f3f;
-color:white;
-text-align:center;
-padding:20px;
-font-size:14px
+  background:#001f3f;
+  color:white;
+  text-align:center;
+  padding:20px;
+  font-size:14px
 }
-
 </style>
-
-<script>
-
-function submitForm(e){
-
-e.preventDefault();
-
-var name=document.getElementById('name').value;
-var phone=document.getElementById('phone').value;
-var email=document.getElementById('email').value;
-var service=document.getElementById('service').value;
-var message=document.getElementById('message').value;
-
-var whatsappURL="https://wa.me/919560291565?text="+
-"New Enquiry:%0AName: "+encodeURIComponent(name)+
-"%0APhone: "+encodeURIComponent(phone)+
-"%0AEmail: "+encodeURIComponent(email)+
-"%0AService: "+encodeURIComponent(service)+
-"%0AMessage: "+encodeURIComponent(message);
-
-window.open(whatsappURL,'_blank');
-
-}
-
-</script>
-
 </head>
+<body>
 
-<body id="top">
-
+<!-- NAVBAR -->
 <nav>
-
-<div class="logo">HMI Tech</div>
-
-<ul>
-
-<li><a href="index.html">Intro</a></li>
-<li><a href="about.html">About Us</a></li>
-
-</ul>
-
+  <div class="logo">HMI Tech</div>
+  <ul>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
-<!-- HERO -->
-
-<header>
-
-<div class="hero-content">
-
-<h1>We Are <span id="typing"></span></h1>
-
-</div>
-
+<!-- HERO INTRO -->
+<header id="intro">
+  <div class="hero-content">
+    <h1>We Are <span id="typing"></span></h1>
+  </div>
 </header>
 
-<!-- ABOUT -->
-
+<!-- ABOUT US -->
 <section id="about">
-
-<h2>About Us</h2>
-
-<p style="max-width:700px;margin:auto;margin-top:20px">
-
-HMI Technology provides ERPNext customization, Zoho implementation, server setup, ecommerce development and accounting ERP solutions across India.
-
-</p>
-
+  <h2>About HMI Technology</h2>
+  <p>HMI Technology is a professional IT solutions company specializing in ERPNext customization, Zoho implementation, server management and eCommerce development.</p>
+  <p>We help businesses automate operations, improve efficiency and build scalable digital systems using modern technologies.</p>
+  <p>Our mission is to deliver reliable, scalable and cost-effective IT solutions that help businesses grow faster in the digital world.</p>
 </section>
 
-<!-- SERVICES (UNCHANGED) -->
+<!-- SERVICES -->
+<section id="services">
+  <h2>Our Premium Services</h2>
+  <div class="service-container">
 
-<section id="services" class="services">
+    <div class="service-box">
+      <i class="fas fa-laptop-code"></i>
+      <h3>Website Development</h3>
+      <p>Modern business websites & eCommerce platforms designed for speed and conversions.</p>
+    </div>
 
-<h2>Our Premium Services</h2>
+    <div class="service-box">
+      <i class="fas fa-cogs"></i>
+      <h3>Custom Software Development</h3>
+      <p>Billing systems, ERP solutions & workflow automation tools for growing businesses.</p>
+    </div>
 
-<div class="service-container">
+    <div class="service-box">
+      <i class="fas fa-chart-line"></i>
+      <h3>SEO & Digital Marketing</h3>
+      <p>Google ranking, paid ads & complete online branding strategies.</p>
+    </div>
 
-<!-- SAME SERVICE BOXES (UNCHANGED) -->
+    <div class="service-box">
+      <i class="fas fa-building"></i>
+      <h3>Zoho Implementation</h3>
+      <p>Zoho CRM setup, Zoho Books, Zoho Inventory, Zoho People & full business automation solutions.</p>
+    </div>
 
-<!-- your existing services remain exactly same -->
+    <div class="service-box">
+      <i class="fas fa-plug"></i>
+      <h3>Zoho Customization & Integration</h3>
+      <p>Zoho API integrations, custom modules, workflow automation & third-party app connectivity.</p>
+    </div>
 
-</div>
+    <div class="service-box">
+      <i class="fas fa-database"></i>
+      <h3>ERPNext Customization</h3>
+      <p>ERPNext module customization, print format design, workflow automation, reports development and third-party integrations tailored to your business process.</p>
+    </div>
 
+    <div class="service-box">
+      <i class="fas fa-shopping-cart"></i>
+      <h3>eCommerce Development</h3>
+      <p>Complete eCommerce solutions including Shopify, WooCommerce, custom online stores, payment gateway integration and performance optimization.</p>
+    </div>
+
+    <div class="service-box">
+      <i class="fas fa-cloud"></i>
+      <h3>AWS Server Management</h3>
+      <p>AWS EC2 setup, server deployment, security configuration, backup management, monitoring and performance optimization.</p>
+    </div>
+
+  </div>
 </section>
 
 <!-- CONTACT -->
-
 <section id="contact">
-
-<h2>Contact Us</h2>
-
-<p><strong>Phone:</strong> 9560291565</p>
-<p><strong>Email:</strong> serviceshmitech@gmail.com</p>
-<p><strong>Location:</strong> Gurgaon, Haryana, India</p>
-
+  <h2>Contact Us</h2>
+  <p><strong>Phone:</strong> 9560291565</p>
+  <p><strong>Email:</strong> serviceshmitech@gmail.com</p>
+  <p><strong>Location:</strong> Gurgaon, Haryana, India</p>
 </section>
 
-<!-- QUOTATION -->
-
-<section id="quotation">
-
-<h2>Get a Free Quotation</h2>
-
-<form onsubmit="submitForm(event)">
-
-<input type="text" id="name" placeholder="Your Name" required>
-
-<input type="text" id="phone" placeholder="Your Contact Number" required>
-
-<input type="email" id="email" placeholder="Your Email" required>
-
-<select id="service" required>
-
-<option value="">Select Required Service</option>
-
-<option>Website Development</option>
-<option>Software Development</option>
-<option>SEO & Digital Marketing</option>
-<option>Zoho Implementation</option>
-<option>Zoho Customization & Integration</option>
-<option>ERPNext Customization</option>
-<option>eCommerce Development</option>
-<option>AWS Server Management</option>
-
-</select>
-
-<textarea id="message" rows="4" placeholder="Briefly describe your requirement..."></textarea>
-
-<button type="submit">Submit Request on WhatsApp</button>
-
-</form>
-
-</section>
-
-<a href="https://wa.me/919560291565" class="whatsapp-float" target="_blank">
-
-<i class="fab fa-whatsapp"></i>
-
-</a>
-
+<!-- FOOTER -->
 <footer>
-
 © 2026 HMI Technology Services | IT & Zoho Experts
-
 </footer>
 
+<!-- SCRIPT -->
 <script>
-
-/* HERO TEXT TYPING */
-
+// Typing effect
 const words=["HMI Tech","Certified","Creative","Experienced"];
-
-let wordIndex=0;
-let charIndex=0;
-let currentWord="";
-let isDeleting=false;
-
-function typeEffect(){
-
-const typing=document.getElementById("typing");
-
-if(!isDeleting){
-
-currentWord=words[wordIndex].substring(0,charIndex+1);
-charIndex++;
-
-}else{
-
-currentWord=words[wordIndex].substring(0,charIndex-1);
-charIndex--;
-
-}
-
-typing.textContent=currentWord;
-
-if(!isDeleting && charIndex===words[wordIndex].length){
-
-setTimeout(()=>isDeleting=true,1000);
-
-}
-
-else if(isDeleting && charIndex===0){
-
-isDeleting=false;
-wordIndex++;
-
-if(wordIndex===words.length){wordIndex=0;}
-
-}
-
-setTimeout(typeEffect,isDeleting?80:120);
-
-}
-
-typeEffect();
-
-
-/* BACKGROUND IMAGES (TECH ONLY) */
-
-const images=[
-
-"https://images.unsplash.com/photo-1518770660439-4636190af475",
-
-"https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
-
-"https://images.unsplash.com/photo-1517430816045-df4b7de11d1d"
-
-];
-
 let i=0;
+function typing(){
+  document.getElementById("typing").innerText=words[i];
+  i++;
+  if(i==words.length){i=0;}
+}
+setInterval(typing,2000);
 
+// Background images rotation
+const images=[
+"https://images.unsplash.com/photo-1518770660439-4636190af475",
+"https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
+"https://images.unsplash.com/photo-1517430816045-df4b7de11d1d"
+];
+let j=0;
 function changeBackground(){
-
-document.querySelector("header").style.backgroundImage="url("+images[i]+")";
-
-i++;
-
-if(i==images.length){
-i=0;
+  document.querySelector("header").style.backgroundImage="url("+images[j]+")";
+  j++;
+  if(j==images.length){j=0;}
 }
-
-}
-
 changeBackground();
-
 setInterval(changeBackground,4000);
 </script>
 
 </body>
 </html>
-
-
-
