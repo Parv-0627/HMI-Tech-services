@@ -171,8 +171,8 @@ header::after {
 }
 .hero-slide[aria-hidden="true"] { pointer-events: none; }
 .hero-slide .hero-layout { position: relative; z-index: 3; }
-.hero-slide .hero-content { animation: none; opacity: 0; transform: translateY(16px); }
-.hero-slide.is-active .hero-content { animation: enter .75s ease-out both; }
+.hero-slide .hero-content { animation: none; opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+.hero-slide.is-active .hero-content { opacity: 1; transform: none; transition: opacity .9s ease .5s, transform .9s ease .5s; }
 .hero-layout {
   align-items: center;
   display: grid;
@@ -529,6 +529,8 @@ footer { background: #10243a; color: #dce8e2; font-size: 12px; padding: 20px; te
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
   /* A gentle crossfade is fine here; only movement (zoom, slide-up) is turned off */
   .hero-slide.is-active { transition-duration: 1.6s, 0s !important; }
+  .hero-slide .hero-content { transform: none !important; transition-duration: .6s !important; }
+  .hero-slide.is-active .hero-content { transition-duration: .9s !important; }
 }
 </style>
 </head>
