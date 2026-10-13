@@ -142,11 +142,12 @@ header::after {
   padding: 0;
   position: absolute;
   text-align: left;
-  transition: opacity 1.2s ease, visibility 1.2s ease;
+  /* The outgoing slide stays visible underneath until the new one has fully faded in */
+  transition: opacity 0s 1.6s, visibility 0s 1.6s;
   visibility: hidden;
   z-index: 2;
 }
-.hero-slide.is-active { opacity: 1; visibility: visible; z-index: 2; }
+.hero-slide.is-active { opacity: 1; transition: opacity 1.6s ease-in-out, visibility 0s; visibility: visible; z-index: 3; }
 .hero-bg {
   background-position: center;
   background-size: cover;
@@ -526,6 +527,8 @@ footer { background: #10243a; color: #dce8e2; font-size: 12px; padding: 20px; te
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+  /* A gentle crossfade is fine here; only movement (zoom, slide-up) is turned off */
+  .hero-slide.is-active { transition-duration: 1.6s, 0s !important; }
 }
 </style>
 </head>
