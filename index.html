@@ -3,242 +3,875 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HMI Technology Services</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="HMI-Tech-Services provides business registration and compliance support, website development, software, Zoho, ERPNext, eCommerce, and AWS services.">
+<meta name="theme-color" content="#102f50">
+<title>HMI-Tech-Services | Business &amp; Technology Solutions</title>
+<link rel="preload" as="image" href="images/hero-creative.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-/* ===== Reset ===== */
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins',sans-serif;background:#f5f7fb;color:#222;scroll-behavior:smooth;}
-
-/* ===== NAVBAR ===== */
-nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  background:white;
-  padding:15px 40px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  box-shadow:0 3px 10px rgba(0,0,0,0.1);
-  z-index:1000;
+:root {
+  color-scheme: light;
+  --ink: #132b42;
+  --muted: #5e7082;
+  --green: #1767b1;
+  --green-dark: #104c87;
+  --paper: #f4f7fb;
+  --line: #e0e8f1;
+  --teal: #0e9aa7;
+  --teal-soft: #e2f6f6;
 }
-nav .logo{font-size:22px;font-weight:700;color:#0d6efd}
-nav ul{list-style:none;display:flex;gap:30px}
-nav ul li a{text-decoration:none;color:#333;font-weight:500;transition:.3s;}
-nav ul li a:hover{color:#0d6efd;}
-
-/* ===== HERO INTRO ===== */
-header{
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:white;
-  background-size:cover;
-  background-position:center;
-  transition:background-image 1s ease-in-out;
-  position:relative;
+.circuit-pattern {
+  height: 100%;
+  inset: 0;
+  opacity: .2;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
 }
-header::after{
-  content:"";
-  position:absolute;
-  top:0;left:0;width:100%;height:100%;
-  background:rgba(0,0,0,0.6);
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.65;
 }
-.hero-content{
-  position:relative;
-  z-index:2;
-  max-width:700px;
+a { color: inherit; }
+nav {
+  align-items: center;
+  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, .9);
+  border-bottom: 1px solid rgba(19, 43, 53, .07);
+  box-shadow: 0 4px 24px rgba(19, 43, 53, .05);
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  padding: 13px max(24px, calc((100% - 1160px) / 2));
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
 }
-header h1{font-size:42px;margin-bottom:10px;}
-
-/* ===== SECTION STYLING ===== */
-section{
-  padding:100px 20px;
-  text-align:center;
+.logo {
+  color: var(--green);
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.25;
+  text-decoration: none;
+  white-space: nowrap;
 }
-section h2{font-size:32px;margin-bottom:30px;color:#0d6efd}
-section p{max-width:800px;margin:auto;font-size:18px;line-height:1.7;color:#444}
-
-/* ===== SERVICES ===== */
-.service-container{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-  max-width:1100px;
-  margin:auto;
+.logo { align-items: center; display: inline-flex; gap: 10px; }
+.logo-mark {
+  background: #fff url("logo.png") -48px -13px / auto 100px no-repeat;
+  border-radius: 11px;
+  box-shadow: 0 0 0 1px var(--line), 0 4px 12px rgba(19, 43, 53, .08);
+  flex: none;
+  height: 44px;
+  width: 50px;
 }
-.service-box{
-  background:#f9fafc;
-  padding:30px;
-  border-radius:15px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.05);
-  transition:.3s;
+.logo-text span {
+  color: var(--muted);
+  display: block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
 }
-.service-box:hover{
-  transform:translateY(-8px);
-  box-shadow:0 8px 25px rgba(0,0,0,0.1);
+nav ul { align-items: center; display: flex; gap: 30px; list-style: none; }
+nav ul a {
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color .2s ease;
 }
-.service-box i{
-  font-size:35px;
-  color:#0d6efd;
-  margin-bottom:15px;
+nav ul a:hover, nav ul a:focus-visible { color: var(--green); }
+.nav-cta {
+  background: var(--green);
+  border-radius: 999px;
+  color: white !important;
+  padding: 11px 18px;
+  transition: background .2s ease, transform .2s ease;
 }
-
-/* ===== CONTACT ===== */
-#contact{background:#0d6efd;color:white}
-#contact p{color:white;font-size:18px;margin-bottom:12px}
-
-/* ===== SMOOTH BUTTONS ===== */
-.btn{
-  display:inline-block;
-  padding:14px 30px;
-  margin:5px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:600;
-  transition:.25s ease;
+.nav-cta:hover { background: var(--green-dark); transform: translateY(-1px); }
+.menu-toggle {
+  background: none;
+  border: 0;
+  color: var(--ink);
+  cursor: pointer;
+  display: none;
+  font-size: 20px;
+  padding: 8px;
 }
-.primary{background:#fff;color:#0d6efd}
-.btn:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(0,0,0,0.18);}
-
-/* ===== FOOTER ===== */
-footer{
-  background:#001f3f;
-  color:white;
-  text-align:center;
-  padding:20px;
-  font-size:14px
+header {
+  background: #102c50;
+  color: white;
+  height: min(90vh, 900px);
+  isolation: isolate;
+  min-height: 690px;
+  overflow: hidden;
+  position: relative;
+}
+header::before {
+  animation: aurora-drift 14s ease-in-out infinite alternate;
+  background: radial-gradient(ellipse at 22% 32%, rgba(48, 180, 255, .32), transparent 36%),
+    radial-gradient(ellipse at 78% 72%, rgba(78, 107, 255, .32), transparent 38%);
+  content: "";
+  filter: blur(12px);
+  inset: -15%;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+header::after {
+  background: linear-gradient(90deg, rgba(7, 22, 48, .28), rgba(7, 22, 48, .05));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+.hero-slide {
+  align-items: center;
+  display: flex;
+  inset: 0;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  text-align: left;
+  transition: opacity 1.2s ease, visibility 1.2s ease;
+  visibility: hidden;
+  z-index: 2;
+}
+.hero-slide.is-active { opacity: 1; visibility: visible; z-index: 2; }
+.hero-bg {
+  background-position: center;
+  background-size: cover;
+  inset: 0;
+  position: absolute;
+  transform: scale(1.1);
+  transition: transform 6s ease-out;
+  z-index: -1;
+}
+.hero-slide.is-active .hero-bg { transform: scale(1); }
+.hero-slide--creative .hero-bg { background-image: linear-gradient(100deg, rgba(8, 30, 62, .92) 10%, rgba(7, 70, 110, .74) 55%, rgba(8, 126, 155, .5)), url("images/hero-creative.jpg"); }
+.hero-slide--experience .hero-bg { background-image: linear-gradient(100deg, rgba(12, 36, 68, .94) 10%, rgba(20, 66, 108, .84) 55%, rgba(8, 110, 122, .66)), url("images/hero-experience.jpg"); }
+.hero-slide--technology .hero-bg { background-image: linear-gradient(100deg, rgba(8, 28, 58, .93) 10%, rgba(10, 64, 100, .76) 55%, rgba(10, 120, 130, .5)), url("images/hero-technology.jpg"); }
+.hero-slide--hmi .hero-bg { background-image: linear-gradient(100deg, rgba(10, 28, 62, .9) 10%, rgba(18, 62, 104, .7) 55%, rgba(14, 107, 114, .45)), url("images/hero-hmi.jpg"); }
+.hero-slide--experience::after {
+  background: repeating-linear-gradient(135deg, transparent 0 22px, rgba(169, 227, 255, .05) 22px 23px),
+    radial-gradient(ellipse at 75% 30%, rgba(255, 255, 255, .14), transparent 45%);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+.hero-slide--hmi::before {
+  background-image: repeating-linear-gradient(0deg, transparent 0 47px, rgba(145, 223, 255, .11) 48px, transparent 49px 96px),
+    repeating-linear-gradient(90deg, transparent 0 47px, rgba(145, 223, 255, .11) 48px, transparent 49px 96px),
+    radial-gradient(circle, rgba(145, 223, 255, .48) 1px, transparent 2px);
+  background-size: 96px 96px, 96px 96px, 96px 96px;
+  content: "";
+  inset: 0;
+  opacity: .45;
+  pointer-events: none;
+  position: absolute;
+}
+.hero-slide[aria-hidden="true"] { pointer-events: none; }
+.hero-slide .hero-layout { position: relative; z-index: 3; }
+.hero-slide .hero-content { animation: none; opacity: 0; transform: translateY(16px); }
+.hero-slide.is-active .hero-content { animation: enter .75s ease-out both; }
+.hero-layout {
+  align-items: center;
+  display: grid;
+  gap: 48px;
+  grid-template-columns: minmax(0, 1.25fr) minmax(260px, .75fr);
+  margin: 65px auto 0;
+  max-width: 1160px;
+  padding: 0 24px;
+  width: 100%;
+}
+.hero-content { animation: enter .7s ease-out both; }
+.hero-tagline { color: #d2efff !important; font-size: clamp(15px, 1.6vw, 19px) !important; font-weight: 800; margin: -7px 0 12px !important; }
+.eyebrow {
+  align-items: center;
+  color: #a9e3ff;
+  display: inline-flex;
+  font-size: 11px;
+  font-weight: 800;
+  gap: 9px;
+  letter-spacing: .15em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.eyebrow::before {
+  background: #5fd6d6;
+  border-radius: 50%;
+  box-shadow: 0 0 14px rgba(95, 214, 214, .8);
+  content: "";
+  height: 7px;
+  width: 7px;
+}
+header h1 {
+  font-size: clamp(40px, 5vw, 68px);
+  letter-spacing: -.045em;
+  line-height: 1.08;
+  margin-bottom: 20px;
+  max-width: 720px;
+}
+.hero-content > p { color: #e1ece8; font-size: 16px; margin-bottom: 26px; max-width: 600px; }
+.hero-services { display: flex; flex-wrap: wrap; gap: 9px; margin: 0 0 28px; }
+.hero-service {
+  align-items: center;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 999px;
+  color: #f4fbf7;
+  display: inline-flex;
+  font-size: 11px;
+  font-weight: 700;
+  gap: 8px;
+  padding: 9px 13px;
+  text-decoration: none;
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+.hero-service i { color: #9fe0ff; }
+.hero-service:hover {
+  background: rgba(255, 255, 255, .16);
+  border-color: rgba(159, 224, 255, .7);
+  transform: translateY(-2px);
+}
+.hero-actions { display: flex; flex-wrap: wrap; gap: 11px; }
+.btn {
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 800;
+  gap: 9px;
+  justify-content: center;
+  padding: 13px 20px;
+  text-decoration: none;
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.primary { background: #a7e4ff; color: #103451; }
+.primary:hover { background: #c5efff; }
+.secondary { border-color: rgba(255, 255, 255, .52); color: white; }
+.secondary:hover { background: rgba(255, 255, 255, .12); border-color: white; }
+.hero-art {
+  animation: float-in 1s .15s ease-out both;
+  justify-self: center;
+  max-width: 390px;
+  position: relative;
+  width: 100%;
+}
+.hero-brand {
+  align-items: center;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 32px;
+  box-shadow: 0 25px 80px rgba(5, 20, 25, .22);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 340px;
+  min-height: 270px;
+  padding: 28px 0 22px;
+  text-align: center;
+  width: 100%;
+}
+.hero-brand img {
+  aspect-ratio: 1;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 18px 50px rgba(5, 20, 25, .25);
+  height: auto;
+  object-fit: cover;
+  width: 78%;
+}
+.hero-brand span { color: #d6edfa; font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+.carousel-dots {
+  align-items: center;
+  bottom: 32px;
+  display: flex;
+  gap: 11px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+.carousel-dot {
+  background: rgba(255, 255, 255, .4);
+  border: 0;
+  border-radius: 99px;
+  cursor: pointer;
+  height: 9px;
+  padding: 0;
+  transition: background .25s ease, width .25s ease;
+  width: 9px;
+}
+.carousel-dot[aria-current="true"] { background: #5fd6d6; width: 28px; }
+.carousel-dot:focus-visible { outline: 2px solid white; outline-offset: 4px; }
+.hero-orbit {
+  aspect-ratio: 1;
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 50%;
+  margin: auto;
+  max-width: 350px;
+  padding: 24px;
+  position: relative;
+  width: 100%;
+}
+.hero-orbit::before, .hero-orbit::after {
+  border: 1px solid rgba(255, 255, 255, .13);
+  border-radius: 50%;
+  content: "";
+  inset: 24px;
+  position: absolute;
+}
+.hero-orbit::after { inset: 50px; }
+.hero-mark {
+  align-items: center;
+  background: linear-gradient(145deg, #d3f3ff, #72c4e7);
+  border: 8px solid rgba(255, 255, 255, .1);
+  border-radius: 50%;
+  box-shadow: 0 25px 80px rgba(5, 20, 25, .28), 0 0 70px rgba(111, 221, 175, .16);
+  color: #145184;
+  display: flex;
+  font-size: 58px;
+  left: 50%;
+  justify-content: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  width: 150px;
+  aspect-ratio: 1;
+}
+.orbit-dot {
+  background: #d3f3ff;
+  border: 5px solid rgba(255, 255, 255, .15);
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(107, 213, 255, .4);
+  height: 20px;
+  position: absolute;
+  right: 23%;
+  top: 10%;
+  width: 20px;
+}
+section { padding: 92px 24px; text-align: center; }
+.section-inner { margin: 0 auto; max-width: 1160px; }
+.section-label {
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  margin-bottom: 9px;
+  text-transform: uppercase;
+}
+section h2 {
+  color: var(--ink);
+  font-size: clamp(29px, 3vw, 40px);
+  letter-spacing: -.035em;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+.section-intro { color: var(--muted); font-size: 15px; margin: 0 auto 42px; max-width: 700px; }
+#about { background: #fff; }
+.about-copy { color: var(--muted); font-size: 15px; margin: auto; max-width: 800px; }
+.about-copy p + p { margin-top: 12px; }
+#services { background: var(--paper); }
+.service-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  text-align: left;
+}
+.service-category + .service-category { margin-top: 64px; }
+.service-category-heading {
+  align-items: center;
+  color: var(--ink);
+  display: flex;
+  font-size: clamp(21px, 2.5vw, 28px);
+  gap: 13px;
+  justify-content: flex-start;
+  letter-spacing: -.03em;
+  margin: 0 0 24px;
+  text-align: left;
+}
+.service-category-heading i {
+  align-items: center;
+  background: #e4f2fb;
+  border-radius: 12px;
+  color: var(--green);
+  display: inline-flex;
+  font-size: 16px;
+  height: 42px;
+  justify-content: center;
+  width: 42px;
+}
+.service-box--tech { min-height: 245px; }
+.service-box.service-box--tech i { background: var(--teal-soft); border-color: #c4ebeb; color: var(--teal); }
+.service-category--tech .service-category-heading i { background: var(--teal-soft); color: var(--teal); }
+.service-box.service-box--tech:hover { border-color: #9fdcdc; }
+.service-box {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  min-height: 260px;
+  overflow: hidden;
+  padding: 30px;
+  position: relative;
+  transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+}
+.service-box::after {
+  background: radial-gradient(circle, rgba(23, 103, 177, .1), transparent 70%);
+  content: "";
+  height: 170px;
+  position: absolute;
+  right: -70px;
+  top: -80px;
+  transition: transform .35s ease;
+  width: 170px;
+}
+.service-box:hover {
+  border-color: #a9cce8;
+  box-shadow: 0 20px 44px rgba(19, 43, 53, .09);
+  transform: translateY(-6px);
+}
+.service-box:hover::after { transform: scale(1.3); }
+.service-box i {
+  align-items: center;
+  background: #e8f3fc;
+  border: 1px solid #d5e8f8;
+  border-radius: 13px;
+  color: var(--green);
+  display: flex;
+  font-size: 19px;
+  height: 49px;
+  justify-content: center;
+  margin-bottom: 23px;
+  position: relative;
+  width: 49px;
+  z-index: 1;
+}
+.service-box h3 {
+  color: var(--ink);
+  font-size: 18px;
+  letter-spacing: -.02em;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+.service-box p { color: var(--muted); font-size: 13px; line-height: 1.8; position: relative; z-index: 1; }
+.service-tag {
+  color: var(--teal);
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  margin-top: 17px;
+  position: relative;
+  text-transform: uppercase;
+  z-index: 1;
+}
+#contact {
+  background: linear-gradient(130deg, #143b66, #102f50 68%, #164e70);
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+#contact::before {
+  background: radial-gradient(ellipse at 50% 120%, rgba(57, 174, 237, .24), transparent 55%),
+    radial-gradient(circle, rgba(145, 223, 255, .22) 1px, transparent 2px) 0 0 / 28px 28px;
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+#contact .section-inner { position: relative; }
+#contact h2 { color: white; }
+#contact .section-label { color: #a9e3ff; }
+#contact .section-intro { color: #d6e5df; margin-bottom: 27px; }
+.contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  justify-content: center;
+  margin: 0 auto 28px;
+}
+.contact-details p { color: #f0f5f2; font-size: 13px; }
+.contact-details a { text-decoration: none; }
+.contact-details a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.contact-actions { justify-content: center; }
+footer { background: #10243a; color: #dce8e2; font-size: 12px; padding: 20px; text-align: center; }
+@keyframes enter { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes float-in { from { opacity: 0; transform: translateY(14px) scale(.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes aurora-drift { from { transform: translate3d(-2%, 1%, 0) scale(1); } to { transform: translate3d(3%, -2%, 0) scale(1.08); } }
+@media (max-width: 860px) {
+  .hero-layout { gap: 16px; grid-template-columns: minmax(0, 1fr) minmax(210px, .7fr); }
+  .hero-orbit { max-width: 290px; }
+  .hero-mark { font-size: 48px; width: 125px; }
+  .service-container { gap: 14px; }
+  .service-box { padding: 24px; }
+  .service-box--tech { min-height: 260px; }
+}
+@media (max-width: 700px) {
+  nav { padding: 10px 20px; }
+  .menu-toggle { display: block; }
+  nav ul {
+    align-items: stretch;
+    background: rgba(255, 255, 255, .98);
+    box-shadow: 0 12px 18px rgba(19, 43, 53, .1);
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    left: 0;
+    padding: 10px 20px 20px;
+    position: absolute;
+    right: 0;
+    top: 100%;
+  }
+  nav ul.open { display: flex; }
+  nav ul li a { display: block; padding: 11px 4px; }
+  .nav-cta { margin-top: 6px; text-align: center; }
+  header { height: 760px; max-height: none; min-height: 0; }
+  .hero-layout { grid-template-columns: 1fr; margin: 0 auto; padding: 100px 24px 90px; }
+  .hero-art, .hero-brand { display: none; }
+  header h1 { font-size: clamp(39px, 9vw, 58px); }
+  .hero-content > p { font-size: 15px; }
+  section { padding: 72px 20px; }
+  .service-container { grid-template-columns: 1fr; }
+  .service-box { min-height: 0; }
+  .service-category + .service-category { margin-top: 48px; }
+  .service-category-heading { align-items: flex-start; font-size: 21px; }
+}
+@media (max-width: 480px) {
+  header { height: 730px; }
+  .hero-layout { padding: 100px 20px 76px; }
+  header h1 { font-size: clamp(36px, 10vw, 48px); }
+  .hero-services { gap: 7px; }
+  .hero-service { font-size: 10px; padding: 8px 10px; }
+  .btn { padding: 12px 15px; }
+  .contact-details { align-items: center; flex-direction: column; gap: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
 </style>
 </head>
 <body>
 
 <!-- NAVBAR -->
-<nav>
-  <div class="logo">HMI Tech</div>
-  <ul>
-    <li><a href="#intro">Intro</a></li>
-    <li><a href="#about">About Us</a></li>
+<nav aria-label="Main navigation">
+  <a class="logo" href="#home" aria-label="HMI-Tech-Services home"><span class="logo-mark" aria-hidden="true"></span><span class="logo-text">HMI-Tech-Services<span>Business &amp; Technology</span></span></a>
+  <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"><i class="fas fa-bars" aria-hidden="true"></i></button>
+  <ul id="site-menu">
+    <li><a href="#home">Home</a></li>
     <li><a href="#services">Services</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a class="nav-cta" href="#contact">Contact</a></li>
   </ul>
 </nav>
 
-<!-- HERO INTRO -->
-<header id="intro">
-  <div class="hero-content">
-    <h1>We Are <span id="typing"></span></h1>
+<!-- HERO CAROUSEL -->
+<header id="home" aria-label="HMI featured services" aria-roledescription="carousel">
+  <section class="hero-slide hero-slide--creative is-active" role="group" aria-roledescription="slide" aria-label="Slide 1 of 4: We Are Creative" aria-hidden="false">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <svg class="circuit-pattern" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+      <defs>
+        <pattern id="circuit-board" width="180" height="160" patternUnits="userSpaceOnUse">
+          <g fill="none" stroke="#91dfff" stroke-width="1.2">
+            <path d="M0 34h34q12 0 12 12v18q0 12 12 12h34m88 44h-34q-12 0-12-12v-18q0-12-12-12H88M92 0v24q0 12 12 12h20m-84 124v-28q0-12-12-12H0"/>
+            <path d="M180 26h-22q-12 0-12 12v10q0 12-12 12h-22M0 112h20q12 0 12-12V84q0-12 12-12h20"/>
+            <circle cx="58" cy="76" r="3"/><circle cx="88" cy="78" r="3"/>
+            <circle cx="106" cy="36" r="3"/><circle cx="134" cy="60" r="3"/>
+            <circle cx="32" cy="100" r="3"/><circle cx="60" cy="132" r="3"/>
+          </g>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#circuit-board)"/>
+    </svg>
+    <div class="hero-layout">
+      <div class="hero-content">
+        <span class="eyebrow">Creative thinking. Practical solutions.</span>
+        <h1>We Are Creative</h1>
+        <p class="hero-tagline">Professional Business Registration &amp; Compliance</p>
+        <p>Build a stronger foundation for your business with clear, dependable registration and compliance support.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="tel:+919560291565"><i class="fas fa-phone" aria-hidden="true"></i> Call Us</a>
+          <a class="btn secondary" href="https://wa.me/919560291565" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="hero-orbit">
+          <div class="hero-mark"><i class="fas fa-lightbulb"></i></div>
+          <span class="orbit-dot"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="hero-slide hero-slide--experience" role="group" aria-roledescription="slide" aria-label="Slide 2 of 4: We Are Experience" aria-hidden="true" inert>
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-layout">
+      <div class="hero-content">
+        <span class="eyebrow">Professional support, every step</span>
+        <h1>We Are Experience</h1>
+        <p class="hero-tagline">Professional Business Registration &amp; Compliance</p>
+        <p>Get practical, knowledgeable assistance for your business registrations, technology and ongoing compliance needs.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="tel:+919560291565"><i class="fas fa-phone" aria-hidden="true"></i> Call Us</a>
+          <a class="btn secondary" href="https://wa.me/919560291565" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="hero-orbit">
+          <div class="hero-mark"><i class="fas fa-award"></i></div>
+          <span class="orbit-dot"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="hero-slide hero-slide--technology" role="group" aria-roledescription="slide" aria-label="Slide 3 of 4: We Are Technology" aria-hidden="true" inert>
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-layout">
+      <div class="hero-content">
+        <span class="eyebrow">Modern tools for modern business</span>
+        <h1>We Are Technology</h1>
+        <p class="hero-tagline">Websites, Software, Zoho, ERPNext &amp; AWS</p>
+        <p>From business websites and custom software to Zoho, ERPNext and cloud servers, we build the technology your business runs on.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="tel:+919560291565"><i class="fas fa-phone" aria-hidden="true"></i> Call Us</a>
+          <a class="btn secondary" href="https://wa.me/919560291565" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="hero-orbit">
+          <div class="hero-mark"><i class="fas fa-code"></i></div>
+          <span class="orbit-dot"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="hero-slide hero-slide--hmi" role="group" aria-roledescription="slide" aria-label="Slide 4 of 4: We Are HMI" aria-hidden="true" inert>
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-layout">
+      <div class="hero-content">
+        <span class="eyebrow">Your partner in business growth</span>
+        <h1>We Are HMI</h1>
+        <p class="hero-tagline">Professional Business Registration &amp; Compliance</p>
+        <p>HMI-Tech-Services brings business compliance and modern technology solutions together under one roof.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="tel:+919560291565"><i class="fas fa-phone" aria-hidden="true"></i> Call Us</a>
+          <a class="btn secondary" href="https://wa.me/919560291565" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-brand" aria-hidden="true">
+        <img src="logo.png" alt="" width="1024" height="1024">
+        <span>Business &amp; Technology</span>
+      </div>
+    </div>
+  </section>
+  <div class="carousel-dots" aria-label="Choose a hero slide">
+    <button class="carousel-dot" type="button" aria-label="Show We Are Creative slide" aria-current="true"></button>
+    <button class="carousel-dot" type="button" aria-label="Show We Are Experience slide" aria-current="false"></button>
+    <button class="carousel-dot" type="button" aria-label="Show We Are Technology slide" aria-current="false"></button>
+    <button class="carousel-dot" type="button" aria-label="Show We Are HMI slide" aria-current="false"></button>
   </div>
 </header>
 
 <!-- ABOUT US -->
 <section id="about">
-  <h2>About HMI Technology</h2>
-  <p>HMI Technology is a professional IT solutions company specializing in ERPNext customization, Zoho implementation, server management and eCommerce development.</p>
-  <p>We help businesses automate operations, improve efficiency and build scalable digital systems using modern technologies.</p>
-  <p>Our mission is to deliver reliable, scalable and cost-effective IT solutions that help businesses grow faster in the digital world.</p>
+  <div class="section-inner">
+    <div class="section-label">About HMI-Tech-Services</div>
+    <h2>Business expertise. Technology that moves you forward.</h2>
+    <div class="about-copy">
+      <p>HMI-Tech-Services helps businesses navigate registration and compliance requirements while providing the digital tools they need to grow.</p>
+      <p>From application documentation and compliance guidance to business websites, software, cloud services and automation, we bring practical support together in one place.</p>
+    </div>
+  </div>
 </section>
 
 <!-- SERVICES -->
 <section id="services">
-  <h2>Our Premium Services</h2>
-  <div class="service-container">
-
-    <div class="service-box">
-      <i class="fas fa-laptop-code"></i>
-      <h3>Website Development</h3>
-      <p>Modern business websites & eCommerce platforms designed for speed and conversions.</p>
+  <div class="section-inner">
+    <div class="section-label">What We Do</div>
+    <h2>Complete support for business and technology</h2>
+    <p class="section-intro">From getting registered and staying compliant to building and managing your digital business, find the support you need.</p>
+    <div class="service-category">
+      <h3 class="service-category-heading"><i class="fas fa-building-columns" aria-hidden="true"></i> Business Registration &amp; Compliance Services</h3>
+      <div class="service-container">
+        <article class="service-box featured-service" id="fssai-service">
+          <i class="fas fa-utensils" aria-hidden="true"></i>
+          <h3>FSSAI Registration &amp; License</h3>
+          <p>Food safety registration and license assistance for food businesses, based on your business type and eligibility.</p>
+          <span class="service-tag">Food safety compliance</span>
+        </article>
+        <article class="service-box featured-service" id="fire-noc-service">
+          <i class="fas fa-fire-extinguisher" aria-hidden="true"></i>
+          <h3>Fire NOC Assistance</h3>
+          <p>Fire safety compliance support, document preparation and Fire NOC application coordination for your premises.</p>
+          <span class="service-tag">Fire safety compliance</span>
+        </article>
+        <article class="service-box featured-service" id="business-registration-service">
+          <i class="fas fa-building" aria-hidden="true"></i>
+          <h3>Business Registrations</h3>
+          <p>Assistance with Shop &amp; Establishment, Trade License and Udyam/MSME registrations, as applicable.</p>
+          <span class="service-tag">Start your business right</span>
+        </article>
+        <article class="service-box">
+          <i class="fas fa-file-lines" aria-hidden="true"></i>
+          <h3>Documentation Support</h3>
+          <p>Help preparing, organizing and reviewing the documents needed for your registration and compliance applications.</p>
+          <span class="service-tag">Paperwork made clearer</span>
+        </article>
+        <article class="service-box">
+          <i class="fas fa-circle-check" aria-hidden="true"></i>
+          <h3>Approval Guarantee</h3>
+          <p>Dedicated guidance and careful application support through each step. Final approvals remain subject to the relevant authority.</p>
+          <span class="service-tag">Dedicated application support</span>
+        </article>
+        <article class="service-box">
+          <i class="fas fa-bullseye" aria-hidden="true"></i>
+          <h3>Compliance Consultation</h3>
+          <p>Ongoing guidance on compliance requirements, renewals and the next steps for your business.</p>
+          <span class="service-tag">Support beyond registration</span>
+        </article>
+      </div>
     </div>
-
-    <div class="service-box">
-      <i class="fas fa-cogs"></i>
-      <h3>Custom Software Development</h3>
-      <p>Billing systems, ERP solutions & workflow automation tools for growing businesses.</p>
+    <div class="service-category service-category--tech">
+      <h3 class="service-category-heading"><i class="fas fa-microchip" aria-hidden="true"></i> Technology Services</h3>
+      <div class="service-container">
+        <article class="service-box service-box--tech">
+          <i class="fas fa-laptop-code" aria-hidden="true"></i>
+          <h3>Website Development</h3>
+          <p>Modern business websites and eCommerce platforms designed for speed, usability and conversions.</p>
+        </article>
+        <article class="service-box service-box--tech">
+          <i class="fas fa-gears" aria-hidden="true"></i>
+          <h3>Custom Software Development</h3>
+          <p>Billing systems, ERP solutions and workflow automation tools built for growing businesses.</p>
+        </article>
+        <article class="service-box service-box--tech">
+          <i class="fas fa-chart-line" aria-hidden="true"></i>
+          <h3>SEO &amp; Digital Marketing</h3>
+          <p>Google ranking, paid advertising and complete online branding strategies for your business.</p>
+        </article>
+        <article class="service-box service-box--tech">
+          <i class="fas fa-circle-nodes" aria-hidden="true"></i>
+          <h3>Zoho Implementation</h3>
+          <p>Zoho CRM, Books, Inventory and People setup with connected business automation.</p>
+        </article>
+        <article class="service-box service-box--tech">
+          <i class="fas fa-screwdriver-wrench" aria-hidden="true"></i>
+          <h3>Zoho Customization &amp; Integration</h3>
+          <p>Zoho API integrations, custom modules and advanced configurations tailored to your workflows.</p>
+        </article>
+        <article class="service-box service-box--tech">
+          <i class="fas fa-chart-pie" aria-hidden="true"></i>
+          <h3>ERPNext Customization</h3>
+          <p>ERPNext module customization, print format setup and advanced configurations for your business.</p>
+        </article>
+        <article class="service-box service-box--tech">
+          <i class="fas fa-cart-shopping" aria-hidden="true"></i>
+          <h3>eCommerce Development</h3>
+          <p>Complete eCommerce platform development and management for your online store.</p>
+        </article>
+        <article class="service-box service-box--tech">
+          <i class="fas fa-cloud" aria-hidden="true"></i>
+          <h3>AWS Server Management</h3>
+          <p>AWS EC2 setup, server deployment, management and optimization to keep your services running smoothly.</p>
+        </article>
+      </div>
     </div>
-
-    <div class="service-box">
-      <i class="fas fa-chart-line"></i>
-      <h3>SEO & Digital Marketing</h3>
-      <p>Google ranking, paid ads & complete online branding strategies.</p>
-    </div>
-
-    <div class="service-box">
-      <i class="fas fa-building"></i>
-      <h3>Zoho Implementation</h3>
-      <p>Zoho CRM setup, Zoho Books, Zoho Inventory, Zoho People & full business automation solutions.</p>
-    </div>
-
-    <div class="service-box">
-      <i class="fas fa-plug"></i>
-      <h3>Zoho Customization & Integration</h3>
-      <p>Zoho API integrations, custom modules, workflow automation & third-party app connectivity.</p>
-    </div>
-
-    <div class="service-box">
-      <i class="fas fa-database"></i>
-      <h3>ERPNext Customization</h3>
-      <p>ERPNext module customization, print format design, workflow automation, reports development and third-party integrations tailored to your business process.</p>
-    </div>
-
-    <div class="service-box">
-      <i class="fas fa-shopping-cart"></i>
-      <h3>eCommerce Development</h3>
-      <p>Complete eCommerce solutions including Shopify, WooCommerce, custom online stores, payment gateway integration and performance optimization.</p>
-    </div>
-
-    <div class="service-box">
-      <i class="fas fa-cloud"></i>
-      <h3>AWS Server Management</h3>
-      <p>AWS EC2 setup, server deployment, security configuration, backup management, monitoring and performance optimization.</p>
-    </div>
-
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <h2>Contact Us</h2>
-  <p><strong>Phone:</strong> 9560291565</p>
-  <p><strong>Email:</strong> serviceshmitech@gmail.com</p>
-  <p><strong>Location:</strong> Gurgaon, Haryana, India</p>
+  <div class="section-inner">
+    <div class="section-label">Let's Get Started</div>
+    <h2>Ready to Get Started?</h2>
+    <p class="section-intro">Talk to our team about your business registration, compliance or technology needs.</p>
+    <div class="contact-details">
+      <p><strong>Phone:</strong> <a href="tel:+919560291565">+91 95602 91565</a></p>
+      <p><strong>Email:</strong> <a href="mailto:serviceshmitech@gmail.com">serviceshmitech@gmail.com</a></p>
+      <p><strong>Location:</strong> Gurgaon, Haryana, India</p>
+    </div>
+    <div class="hero-actions contact-actions">
+      <a class="btn primary" href="tel:+919560291565"><i class="fas fa-phone" aria-hidden="true"></i> Call Us</a>
+      <a class="btn secondary" href="https://wa.me/919560291565" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+      <a class="btn secondary" href="mailto:serviceshmitech@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i> Email Us</a>
+    </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-© 2026 HMI Technology Services | IT & Zoho Experts
+© 2026 HMI-Tech-Services | Business &amp; Technology Solutions
 </footer>
 
 <!-- SCRIPT -->
 <script>
-// Typing effect
-const words=["HMI Tech","Certified","Creative","Experienced"];
-let i=0;
-function typing(){
-  document.getElementById("typing").innerText=words[i];
-  i++;
-  if(i==words.length){i=0;}
-}
-setInterval(typing,2000);
+const menuToggle=document.querySelector('.menu-toggle');
+const siteMenu=document.querySelector('#site-menu');
+const heroSlides=Array.from(document.querySelectorAll('.hero-slide'));
+const carouselDots=Array.from(document.querySelectorAll('.carousel-dot'));
+let activeSlide=0;
+let carouselTimer;
 
-// Background images rotation
-const images=[
-"https://images.unsplash.com/photo-1518770660439-4636190af475",
-"https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
-"https://images.unsplash.com/photo-1517430816045-df4b7de11d1d"
-];
-let j=0;
-function changeBackground(){
-  document.querySelector("header").style.backgroundImage="url("+images[j]+")";
-  j++;
-  if(j==images.length){j=0;}
+function showHeroSlide(index){
+  activeSlide=(index+heroSlides.length)%heroSlides.length;
+  heroSlides.forEach((slide,slideIndex)=>{
+    const isActive=slideIndex===activeSlide;
+    slide.classList.toggle('is-active',isActive);
+    slide.setAttribute('aria-hidden',String(!isActive));
+    slide.inert=!isActive;
+  });
+  carouselDots.forEach((dot,dotIndex)=>{
+    dot.setAttribute('aria-current',String(dotIndex===activeSlide));
+  });
 }
-changeBackground();
-setInterval(changeBackground,4000);
+
+function startCarousel(){
+  window.clearInterval(carouselTimer);
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    carouselTimer=window.setInterval(()=>showHeroSlide(activeSlide+1),5000);
+  }
+}
+
+carouselDots.forEach((dot,index)=>dot.addEventListener('click',()=>{
+  showHeroSlide(index);
+  startCarousel();
+}));
+const hero=document.querySelector('#home');
+hero.addEventListener('mouseenter',()=>window.clearInterval(carouselTimer));
+hero.addEventListener('mouseleave',startCarousel);
+hero.addEventListener('focusin',()=>window.clearInterval(carouselTimer));
+hero.addEventListener('focusout',event=>{if(!hero.contains(event.relatedTarget))startCarousel();});
+const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
+reducedMotion.addEventListener('change',startCarousel);
+startCarousel();
+
+menuToggle.addEventListener('click',()=>{
+  const isOpen=siteMenu.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded',String(isOpen));
+  menuToggle.setAttribute('aria-label',isOpen?'Close navigation menu':'Open navigation menu');
+});
+siteMenu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
+  siteMenu.classList.remove('open');
+  menuToggle.setAttribute('aria-expanded','false');
+  menuToggle.setAttribute('aria-label','Open navigation menu');
+}));
 </script>
 
 </body>
