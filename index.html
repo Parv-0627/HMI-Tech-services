@@ -844,22 +844,17 @@ function showHeroSlide(index){
 
 function startCarousel(){
   window.clearInterval(carouselTimer);
-  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-    carouselTimer=window.setInterval(()=>showHeroSlide(activeSlide+1),5000);
-  }
+  carouselTimer=window.setInterval(()=>showHeroSlide(activeSlide+1),5000);
 }
 
 carouselDots.forEach((dot,index)=>dot.addEventListener('click',()=>{
   showHeroSlide(index);
   startCarousel();
 }));
+// Pause only while a keyboard user is tabbing through the slide buttons
 const hero=document.querySelector('#home');
-hero.addEventListener('mouseenter',()=>window.clearInterval(carouselTimer));
-hero.addEventListener('mouseleave',startCarousel);
-hero.addEventListener('focusin',()=>window.clearInterval(carouselTimer));
+hero.addEventListener('focusin',event=>{if(event.target.matches(':focus-visible'))window.clearInterval(carouselTimer);});
 hero.addEventListener('focusout',event=>{if(!hero.contains(event.relatedTarget))startCarousel();});
-const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
-reducedMotion.addEventListener('change',startCarousel);
 startCarousel();
 
 menuToggle.addEventListener('click',()=>{
