@@ -1,0 +1,53 @@
+---
+layout: null
+title: Articles
+description: Insights on ERPNext, business automation, finance software and custom software development from HMI-Tech-Services.
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#102f50">
+{% seo %}
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/articles.css' | relative_url }}">
+</head>
+<body>
+<nav class="site-nav" aria-label="Main navigation">
+  <a class="site-logo" href="{{ '/' | relative_url }}"><span class="mark" aria-hidden="true"></span>HMI-Tech-Services</a>
+  <ul>
+    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+    <li><a href="{{ '/#services' | relative_url }}">Services</a></li>
+    <li class="keep"><a href="{{ '/articles/' | relative_url }}" aria-current="page">Articles</a></li>
+    <li class="keep"><a href="{{ '/#contact' | relative_url }}">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="page-head">
+  <div class="label">Insights</div>
+  <h1>Articles</h1>
+  <p>Practical ideas on ERPNext, business automation, finance software and custom software development.</p>
+</header>
+
+<main class="article-grid">
+  {% for post in site.posts %}
+  <a class="article-card" href="{{ post.url | relative_url }}">
+    {% if post.cover %}<img class="cover" src="{{ post.cover | relative_url }}" alt="" loading="lazy">{% else %}<span class="cover cover-fallback" aria-hidden="true">{{ post.icon | default: "💡" }}</span>{% endif %}
+    <span class="body">
+      <span class="meta">{{ post.date | date: "%d %b %Y" }} · {{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.summary }}</p>
+      <span class="read-more">Read article →</span>
+    </span>
+  </a>
+  {% else %}
+  <p class="empty">Articles are coming soon.</p>
+  {% endfor %}
+</main>
+
+<footer class="site-footer">
+  © {{ 'now' | date: "%Y" }} HMI-Tech-Services | Business &amp; Technology Solutions · <a href="{{ '/' | relative_url }}">Home</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,16 @@
+# GitHub Pages builds the Articles section from this config.
+# Existing pages (index.html, about.html) have no front matter, so they are copied as-is.
+title: HMI-Tech-Services
+description: Business registration, compliance and technology services — websites, software, Zoho, ERPNext, eCommerce and AWS.
+url: "https://hmitechnology.co.in"
+permalink: /articles/:title/
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: article }
+exclude:
+  - README.md
+  - ARTICLE-TEMPLATE.md

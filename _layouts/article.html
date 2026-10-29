@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#102f50">
+{% seo %}
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/articles.css' | relative_url }}">
+</head>
+<body>
+<nav class="site-nav" aria-label="Main navigation">
+  <a class="site-logo" href="{{ '/' | relative_url }}"><span class="mark" aria-hidden="true"></span>HMI-Tech-Services</a>
+  <ul>
+    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+    <li><a href="{{ '/#services' | relative_url }}">Services</a></li>
+    <li class="keep"><a href="{{ '/articles/' | relative_url }}" aria-current="page">Articles</a></li>
+    <li class="keep"><a href="{{ '/#contact' | relative_url }}">Contact</a></li>
+  </ul>
+</nav>
+
+<article class="article">
+  <a class="back" href="{{ '/articles/' | relative_url }}">← All articles</a>
+  <h1>{{ page.title }}</h1>
+  <div class="meta">{{ page.date | date: "%d %B %Y" }} · {{ content | number_of_words | divided_by: 200 | plus: 1 }} min read</div>
+  {% if page.summary %}<p class="summary" style="margin-top:14px">{{ page.summary }}</p>{% endif %}
+  {% if page.cover %}<img class="cover" src="{{ page.cover | relative_url }}" alt="">{% endif %}
+
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  {% if page.tags.size > 0 %}
+  <div class="tags">{% for tag in page.tags %}<span>#{{ tag }}</span>{% endfor %}</div>
+  {% endif %}
+
+  <div class="cta-box">
+    <h2>Need ERPNext, Zoho or custom software?</h2>
+    <p>Talk to our team about implementing the right system for your business.</p>
+    <a class="btn primary" href="https://wa.me/919560291565?text={{ 'Hello HMI-Tech-Services! I read your article "' | append: page.title | append: '" and would like to know more.' | uri_escape }}" target="_blank" rel="noopener">💬 WhatsApp us</a>
+    <a class="btn secondary" href="{{ '/#contact' | relative_url }}">Contact us</a>
+    {% if page.linkedin %}<a class="btn linkedin" href="{{ page.linkedin }}" target="_blank" rel="noopener">Read on LinkedIn</a>{% endif %}
+  </div>
+
+  {% assign share_url = page.url | absolute_url | uri_escape %}
+  <div class="share">
+    <b>Share:</b>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ share_url }}" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://wa.me/?text={{ page.title | append: ' ' | uri_escape }}{{ share_url }}" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="https://twitter.com/intent/tweet?url={{ share_url }}&text={{ page.title | uri_escape }}" target="_blank" rel="noopener">X</a>
+  </div>
+</article>
+
+<footer class="site-footer">
+  © {{ 'now' | date: "%Y" }} HMI-Tech-Services | Business &amp; Technology Solutions · <a href="{{ '/articles/' | relative_url }}">Articles</a>
+</footer>
+</body>
+</html>
